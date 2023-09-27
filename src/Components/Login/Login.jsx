@@ -22,6 +22,7 @@ function Google() {
 
     //   const dispatch =useDispatch()
     // const {login,setLogin} =useContext(AuthContext)
+    //r
     return (
         <>
             <GoogleOAuthProvider clientId="572559618246-c7c7eo18rgj40uvardjue8j5dp6obuer.apps.googleusercontent.com">
