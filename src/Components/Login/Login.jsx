@@ -6,7 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import { GoogleLogin } from '@react-oauth/google';
 import { useDispatch } from "react-redux";
-// import { setToken } from "../../Redux/Slice";
+import { setToken } from "../../Redux/Slice";
 import { googleResponse } from "../../API/API";
 
 
@@ -20,7 +20,7 @@ import { googleResponse } from "../../API/API";
 function Google() {
     const navigate = useNavigate()
 
-    //   const dispatch =useDispatch()
+      const dispatch =useDispatch()
     // const {login,setLogin} =useContext(AuthContext)
     //r
     return (
@@ -33,8 +33,8 @@ function Google() {
                             localStorage.setItem("auth", JSON.stringify(data.token));
                             if (data) {
                                 // console.log(data)
-                                //   dispatch(setToken(data?.token))
-                                navigate('/')
+                                  dispatch(setToken(data?.token))
+                                // navigate('/')
 
                             }
                         } catch (err) {
