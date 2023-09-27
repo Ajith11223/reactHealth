@@ -121,7 +121,7 @@ const LayoutUser = ({ children }) => {
             <nav className=" p-4 flex justify-between items-center border-b border-gray-300">
               <img
                 src={
-                  "http://localhost:3000/static/media/NavIcon.e65bef8dc512ce9936bf.png"
+                  "http://localhost:3001/static/media/NavIcon.e65bef8dc512ce9936bf.png"
                 }
                 alt="Icon"
                 width={210}

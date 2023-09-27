@@ -11,7 +11,7 @@ const SidebarData = ({ toggle}) => {
         {datas.map((data) => {
           return (
             <Link
-              to={data.id === 2 ? "/projectmanagement" : "/"}
+              to={data?.path}
               className={` flex items-center mt-2 p-3 cursor-pointer hover:bg-[#4A4BE4] hover:text-white rounded-xl rounded-l-none transition-all duration-300  left-4 bottom-4`}
               key={data.id}
             >
