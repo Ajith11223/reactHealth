@@ -2,17 +2,17 @@ import React, { useState } from "react";
 import { AiOutlineEllipsis } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
 
-const FeasibilityTable = ({ feasibilityData }) => {
+const FeasibilityTable = ({ feasibilityData,projectId }) => {
     const navigate = useNavigate();
 
     const handleClick = (feasibilityId) => {
         // Navigate to the "/financialdocuments" route
-        navigate(`/feasibilitydocuments/${feasibilityId}`);
+        navigate(`/user/project/${projectId}/${feasibilityId}`);
     };
 
     return (
         <div
-            style={{ marginTop: "20px", marginRight: "50px", paddingInline: "40px",overflow:"scroll" }}
+            style={{ marginTop: "20px", marginRight: "50px", paddingInline: "40px",minHeight:"85vh",overflowX:"scroll" }}
         >
             
             <table className="min-w-full divide-y divide-gray-200 rounded-lg" >

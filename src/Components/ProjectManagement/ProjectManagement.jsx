@@ -26,7 +26,7 @@ const ProjectManagement = () => {
         }
         try {
             if(user.id){
-                const { data } = await testApi.post('/project/getPrj', dataObj)
+                const { data } = await testApi.get(`/project/getPrj/${user.id}`)
                 setUserProjects(data?.getData)
             }
             
@@ -104,9 +104,9 @@ const ProjectManagement = () => {
                 <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-5">
 
                     {
-                        userProjects?.map((HospitalServices)=>{
+                        userProjects?.map((HospitalServices,i)=>{
                             return(
-                                <div onClick={()=> handleRoute(HospitalServices._id)}>
+                                <div onClick={()=> handleRoute(HospitalServices._id)} key={i}>
                                 
                                 <CustomCard
                                    key={HospitalServices._id}

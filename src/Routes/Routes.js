@@ -1,4 +1,5 @@
 import FeasibilityList from "../Components/FeasibiltyList/FeasibilityList";
+import FeasibiltyReport from "../Components/FeasibiltyReport/FeasibiltyReport";
 import Home from "../Components/Home/Home";
 import Login from "../Components/Login/Login";
 import ProjectManagement from "../Components/ProjectManagement/ProjectManagement";
@@ -16,6 +17,7 @@ const publicRoutes = [
     { path: "/user/home", component: <UserDashBoard /> },
     { path: "/user/project", component: <ProjectManagement /> },
     { path: "/user/project/:id", component: <FeasibilityList /> },
+    { path: "/user/project/:id/:fid", component: <FeasibiltyReport /> },
 
   ]
 
