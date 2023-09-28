@@ -1,4 +1,13 @@
 import {RxDashboard} from 'react-icons/rx';
+import {RiDraftFill} from "react-icons/ri";
+import {MdPolicy} from "react-icons/md";
+import {GrUserWorker} from "react-icons/gr";
+import {MdAssuredWorkload} from "react-icons/md";
+import {GrArticle} from "react-icons/gr";
+import {RiUserSearchFill} from "react-icons/ri";
+import {FaCediSign} from "react-icons/fa6";
+import {MdOutlineAddHomeWork} from "react-icons/md"
+
 
 export const datas = [
     {
@@ -10,60 +19,55 @@ export const datas = [
     },
     {
         id:2,
-        icon:<RxDashboard/>,
+        icon:<RiDraftFill/>,
         text:"Project Management",
         path:"/user/project",
     },
     {
         id:3,
-        icon:<RxDashboard/>,
-        text:"Feasiblity Report",
+        icon:<MdOutlineAddHomeWork/>,
+        text:"Post Jobs",
         path:"/user/project",
     },
+
     {
         id:4,
-        icon:<RxDashboard/>,
+        icon:<MdPolicy/>,
         text:"Policy & Procedures",
         path:"/user/project",
     },
     {
         id:5,
-        icon:<RxDashboard/>,
+        icon:<GrUserWorker/>,
         text:"Jobs",
         path:"/user/project",
     },
     {
         id:6,
-        icon:<RxDashboard/>,
+        icon:<MdAssuredWorkload/>,
         text:"Training",
         path:"/user/project",
     },
     {
         id:7,
-        icon:<RxDashboard/>,
+        icon:<GrArticle/>,
         text:"Articles",
         path:"/user/project",
     },
     {
         id:8,
-        icon:<RxDashboard/>,
+        icon:<RiUserSearchFill/>,
         text:"Users",
         path:"/user/project",
     },
     {
         id:9,
-        icon:<RxDashboard/>,
+        icon:<FaCediSign/>,
         text:"Facility Planning",
         path:"/user/project",
     },
     {
         id:10,
-        icon:<RxDashboard/>,
-        text:"Post Jobs",
-        path:"/user/project",
-    },
-    {
-        id:11,
         icon:<RxDashboard/>,
         text:"Post Jobs",
         path:"/user/project",
