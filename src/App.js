@@ -3,8 +3,13 @@ import './App.css';
 import LayoutUser from './Components/Layout/LayoutUser';
 import Login from './Components/Login/Login';
 import { userRoutes } from './Routes/Routes';
+import { useSelector } from 'react-redux';
+import { UserMiddleware } from './UserMiddleware/UserMiddleware';
 
 function App() {
+  const token = useSelector((state)=> state.counter)
+  console.log(token)
+ 
   return (
     <div className="App">
       <Routes>
@@ -18,9 +23,12 @@ function App() {
 
               <Route path={route.path}
                 element={
+                  <UserMiddleware>
+
                   <LayoutUser>
                     {route.component}
                   </LayoutUser>
+                  </UserMiddleware>
                   
                 }
                   key={id}
