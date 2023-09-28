@@ -1,7 +1,7 @@
 import React from "react";
 // import icon from '../../Images/LoginIcon.png'
-// import GoogleIcon from '../../Images/google_icon.png' 
-// import AppleIcon from '../../Images/apple_icon.png'
+import GoogleIcon from '../../Images/google_icon.png' 
+import AppleIcon from '../../Images/apple_icon.png'
 import { Link, useNavigate } from 'react-router-dom';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import { GoogleLogin } from '@react-oauth/google';
@@ -105,7 +105,7 @@ const Login = () => {
                                     className="relative rounded-xl box-border w-full flex flex-row py-3.5 px-[22px] items-center justify-start text-left text-[18px] text-dimgray font-helvetica-neue border-[1px] border-solid border-lightgray flex items-center mx-2 min-w-[fit-content] mb-2 sm:mb-0"
                                 >
                                     <img
-                                        src={"GoogleIcon"}
+                                        src={GoogleIcon}
                                         alt="Google"
                                         width={27}
                                         height={27}
@@ -120,7 +120,7 @@ const Login = () => {
                                     className="relative rounded-xl box-border w-full flex flex-row py-3.5 px-[22px] items-center justify-start text-left text-[18px] text-dimgray font-helvetica-neue border-[1px] border-solid border-lightgray flex items-center mx-2 min-w-[fit-content]"
                                 >
                                     <img
-                                        src={"AppleIcon"}
+                                        src={AppleIcon}
                                         alt="Apple"
                                         width={27}
                                         height={27}
