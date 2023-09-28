@@ -10,7 +10,10 @@ module.exports = {
     extend: {
       colors:{
         primary:"#ff5733",
-      }
+      },
+      backgroundColor: {
+        'custom-blue': '#5051F9',
+      },
     },
   },
   plugins: [],
