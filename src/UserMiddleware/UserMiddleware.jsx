@@ -5,7 +5,8 @@ import { setUser } from '../Redux/Slice';
 import { useDispatch, useSelector } from 'react-redux';
 
 export const UserMiddleware = ({ children }) => {
-  const tokenRedux = useSelector((state) => state.counter.tokenRedux);
+  const {tokenRedux} = useSelector((state) => state.counter);
+  console.log(tokenRedux)
   const dispatch = useDispatch();
   const token = JSON.parse(localStorage.getItem('auth'));
 
@@ -25,7 +26,7 @@ export const UserMiddleware = ({ children }) => {
       // If no token is found, navigate to the login page
       navigate('/login');
     }
-  }, [token, tokenRedux, dispatch, navigate]);
+  }, [tokenRedux]);
 
   return <>{children}</>;
 };

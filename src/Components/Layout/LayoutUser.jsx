@@ -118,7 +118,7 @@ const LayoutUser = ({ children }) => {
             id="header-section"
             style={{ minHeight: "80px" }}
           >
-            <nav className=" p-4 flex justify-between items-center border-b border-gray-300">
+            <nav className=" p-5 flex justify-between items-center border-b border-gray-300">
               <img
                 src={
                   "http://localhost:3001/static/media/NavIcon.e65bef8dc512ce9936bf.png"
@@ -189,7 +189,7 @@ const LayoutUser = ({ children }) => {
             style={{ height: "100vh" }}
             id="main-text"
           >
-            <div className="sidebar-content" style={{ padding: "20px" }}>
+            <div className="sidebar-content" >
               {children}
             </div>
           </div>
