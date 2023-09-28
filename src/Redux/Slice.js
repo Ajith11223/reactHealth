@@ -31,6 +31,7 @@ export const counterSlice = createSlice({
       state.user =action.payload
     },
     setToken:(state,action)=>{
+        console.log(action)
       state.tokenRudex =action.payload
     },
   },

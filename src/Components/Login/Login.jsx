@@ -32,9 +32,9 @@ function Google() {
                             const { data } = await googleResponse(credentialResponse);
                             localStorage.setItem("auth", JSON.stringify(data.token));
                             if (data) {
-                                // console.log(data)
+                                console.log(data)
                                   dispatch(setToken(data?.token))
-                                // navigate('/')
+                                navigate('/')
 
                             }
                         } catch (err) {
