@@ -21,7 +21,7 @@ function ProjectModal({ openModal, closeModal }) {
     }
 
     try {
-      if(projectName?.length != 0 && location?.length != 0){
+      if (projectName?.length != 0 && location?.length != 0) {
         const createProject = await testApi.post('/project/createPrj', data)
         setValid(false)
         setProjectName("")
@@ -46,7 +46,7 @@ function ProjectModal({ openModal, closeModal }) {
           className="modal-container bg-white mx-auto rounded shadow-lg z-50 overflow-y-auto"
           style={{
             width: "678px",
-            height: "268px",
+            height: "668px",
             top: "425px",
             left: "496px",
             borderRadius: "20px",
@@ -107,6 +107,174 @@ function ProjectModal({ openModal, closeModal }) {
               {
                 valid && location?.length == 0 ? <span style={{ color: "red" }}>Please Enter Location</span> : ""
               }
+
+              <div>
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="location"
+                >
+                  Description
+                </label>
+                <input
+                  type="text"
+                  id="location"
+                  name="location"
+                  placeholder="Description"
+
+                  className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                />
+              </div>
+              <div>
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="location"
+                >
+                  Customer Name
+                </label>
+                <input
+                  type="text"
+                  id="location"
+                  name="location"
+                  placeholder="Customer Name"
+
+                  className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                />
+              </div>
+
+              <div>
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="location"
+                >
+                  Contact Email
+                </label>
+                <input
+                  type="text"
+                  id="location"
+                  name="location"
+                  placeholder="Contact Email"
+
+                  className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                />
+              </div>
+
+              <div>
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="location"
+                >
+                  Contact Mobile Number
+                </label>
+                <input
+                  type="text"
+                  id="location"
+                  name="location"
+                  placeholder="Contact Mobile Number"
+
+                  className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                />
+              </div>
+
+              <div>
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="location"
+                >
+                  Country
+                </label>
+                <input
+                  type="text"
+                  id="location"
+                  name="location"
+                  placeholder="Country"
+
+                  className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                />
+              </div>
+
+              <div>
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="location"
+                >
+                  Project Location
+                </label>
+                <input
+                  type="text"
+                  id="location"
+                  name="location"
+                  placeholder="Project Location"
+
+                  className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                />
+              </div>
+
+              <div>
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="location"
+                >
+                  Currency
+                </label>
+                <input
+                  type="text"
+                  id="location"
+                  name="location"
+                  placeholder=" Currency"
+
+                  className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                />
+              </div>
+              <div>
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="location"
+                >
+                  Flag
+                </label>
+                <input
+                  type="text"
+                  id="location"
+                  name="location"
+                  placeholder="Flag"
+
+                  className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                />
+              </div>
+              <div>
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="location"
+                >
+                  Project Duration
+                </label>
+                <input
+                  type="text"
+                  id="location"
+                  name="location"
+                  placeholder="Project Duration"
+
+                  className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                />
+              </div>
+              <div>
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="location"
+                >
+                  Project Notes
+                </label>
+                <input
+                  type="text"
+                  id="location"
+                  name="location"
+                  placeholder="Project Notes"
+
+                  className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                />
+              </div>
+
+
             </div>
             {/* Modal Footer */}
             <div

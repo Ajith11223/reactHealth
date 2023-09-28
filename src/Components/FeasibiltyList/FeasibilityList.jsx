@@ -20,10 +20,8 @@ const FeasibilityList=()=> {
   const { id } = useParams();
 
   const fetchFeasibilty = async () => {
-    const dataId = {
-      "projectId": id
-    }
-    const {data} = await getProjectBasedFeasiblity(dataId)
+  
+    const {data} = await getProjectBasedFeasiblity(id)
     setFeasibilityData(data?.getData)
   }
 
@@ -73,7 +71,7 @@ const FeasibilityList=()=> {
 
       </div>
       <div>
-        <FeasibilityTable feasibilityData={feasibilityData} />
+        <FeasibilityTable feasibilityData={feasibilityData} projectId={id}/>
       </div>
     </div>
   );
