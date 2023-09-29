@@ -27,15 +27,15 @@ const RevenueSourceOne = () => {
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
   return (
-    <div className=" p-4">
+    <div className=" p-4 bg-gray-50 rounded-b-lg">
       <Accordion
         open={open === 1}
-        className="mb-2 rounded-lg border border-blue-gray-100 px-4 "
+        className="mb-2 rounded-lg  px-4 "
       >
         <AccordionHeader
           onClick={() => handleOpen(1)}
-          className={`border-b-0 transition-colors ${
-            open === 1 ? "text-blue-500 hover:!text-blue-700" : ""
+          className={`bg-white  p-5 h-[50px] rounded-lg  transition-colors ${
+            open === 1 ? "text-white bg-blue-500 p-5" : ""
           }`}
         >
           Sr Con Cardiologist
@@ -46,12 +46,12 @@ const RevenueSourceOne = () => {
       </Accordion>
       <Accordion
         open={open === 2}
-        className="mb-2 rounded-lg border border-blue-gray-100 px-4"
+        className="mb-2 rounded-lg px-4"
       >
         <AccordionHeader
           onClick={() => handleOpen(2)}
-          className={`border-b-0 transition-colors ${
-            open === 2 ? "text-blue-500 hover:!text-blue-700" : ""
+          className={`bg-white  p-5 h-[50px] rounded-lg  transition-colors ${
+            open === 2 ? "text-white bg-blue-500 p-5" : ""
           }`}
         >
           Con Internal Medicine
@@ -62,12 +62,12 @@ const RevenueSourceOne = () => {
       </Accordion>
       <Accordion
         open={open === 3}
-        className="rounded-lg border border-blue-gray-100 px-4 mb-2"
+        className="rounded-lg px-4 mb-2"
       >
         <AccordionHeader
           onClick={() => handleOpen(3)}
-          className={`border-b-0 transition-colors ${
-            open === 3 ? "text-blue-500 hover:!text-blue-700" : ""
+          className={`bg-white  p-5 h-[50px] rounded-lg  transition-colors ${
+            open === 3 ? "text-white bg-blue-500 p-5" : ""
           }`}
         >
           Con Radiology
@@ -79,11 +79,11 @@ const RevenueSourceOne = () => {
 
       <Accordion
         open={open === 4}
-        className="rounded-lg border border-blue-gray-100 px-4 mb-2"      >
+        className="rounded-lg px-4 mb-2"      >
         <AccordionHeader
           onClick={() => handleOpen(4)}
-          className={`border-b-0 transition-colors ${
-            open === 4 ? "text-blue-500 hover:!text-blue-700" : ""
+          className={`bg-white  p-5 h-[50px] rounded-lg  transition-colors ${
+            open === 4 ? "text-white bg-blue-500 p-5" : ""
           }`}
         >
           Con Pediatrics
@@ -94,11 +94,11 @@ const RevenueSourceOne = () => {
       </Accordion>
       <Accordion
         open={open === 5}
-        className="rounded-lg border border-blue-gray-100 px-4 mb-2"      >
+        className="rounded-lg px-4 mb-2"      >
         <AccordionHeader
           onClick={() => handleOpen(5)}
-          className={`border-b-0 transition-colors ${
-            open === 5 ? "text-blue-500 hover:!text-blue-700" : ""
+          className={`bg-white  p-5 h-[50px] rounded-lg  transition-colors ${
+            open === 5 ? "text-white bg-blue-500 p-5" : ""
           }`}
         >
           Con Gynecologist
@@ -109,11 +109,11 @@ const RevenueSourceOne = () => {
       </Accordion>
       <Accordion
         open={open === 6}
-        className="rounded-lg border border-blue-gray-100 px-4 mb-2"      >
+        className="rounded-lg px-4 mb-2"      >
         <AccordionHeader
           onClick={() => handleOpen(6)}
-          className={`border-b-0 transition-colors ${
-            open === 6 ? "text-blue-500 hover:!text-blue-700" : ""
+          className={`bg-white  p-5 h-[50px] rounded-lg  transition-colors ${
+            open === 6 ? "text-white bg-blue-500 p-5" : ""
           }`}
         >
           Con Orthopedic
@@ -124,11 +124,11 @@ const RevenueSourceOne = () => {
       </Accordion>
       <Accordion
         open={open === 7}
-        className="rounded-lg border border-blue-gray-100 px-4 mb-2"      >
+        className="rounded-lg px-4 mb-2"      >
         <AccordionHeader
           onClick={() => handleOpen(7)}
-          className={`border-b-0 transition-colors ${
-            open === 7 ? "text-blue-500 hover:!text-blue-700" : ""
+          className={`bg-white  p-5 h-[50px] rounded-lg  transition-colors ${
+            open === 7 ? "text-white bg-blue-500 p-5" : ""
           }`}
         >
           Con Urology
@@ -139,11 +139,11 @@ const RevenueSourceOne = () => {
       </Accordion>
       <Accordion
         open={open === 8}
-        className="rounded-lg border border-blue-gray-100 px-4 mb-2"      >
+        className="rounded-lg px-4 mb-2"      >
         <AccordionHeader
           onClick={() => handleOpen(8)}
-          className={`border-b-0 transition-colors ${
-            open === 8 ? "text-blue-500 hover:!text-blue-700" : ""
+          className={`bg-white  p-5 h-[50px] rounded-lg  transition-colors ${
+            open === 8 ? "text-white bg-blue-500 p-5" : ""
           }`}
         >
           Con Family Medicine
@@ -154,11 +154,11 @@ const RevenueSourceOne = () => {
       </Accordion>
       <Accordion
         open={open === 9}
-        className="rounded-lg border border-blue-gray-100 px-4 mb-2"      >
+        className="rounded-lg px-4 mb-2"      >
         <AccordionHeader
           onClick={() => handleOpen(9)}
-          className={`border-b-0 transition-colors ${
-            open === 9 ? "text-blue-500 hover:!text-blue-700" : ""
+          className={`bg-white  p-5 h-[50px] rounded-lg  transition-colors ${
+            open === 9 ? "text-white bg-blue-500 p-5" : ""
           }`}
         >
           Con General Surgery
@@ -169,11 +169,11 @@ const RevenueSourceOne = () => {
       </Accordion>
       <Accordion
         open={open === 10}
-        className="rounded-lg border border-blue-gray-100 px-4 mb-2"      >
+        className="rounded-lg px-4 mb-2"      >
         <AccordionHeader
           onClick={() => handleOpen(10)}
-          className={`border-b-0 transition-colors ${
-            open === 10 ? "text-blue-500 hover:!text-blue-700" : ""
+          className={`bg-white  p-5 h-[50px] rounded-lg  transition-colors ${
+            open === 10 ? "text-white bg-blue-500 p-5" : ""
           }`}
         >
           Con Gastroentrologist
@@ -184,11 +184,11 @@ const RevenueSourceOne = () => {
       </Accordion>
       <Accordion
         open={open === 11}
-        className="rounded-lg border border-blue-gray-100 px-4 mb-2"      >
+        className="rounded-lg px-4 mb-2"      >
         <AccordionHeader
           onClick={() => handleOpen(11)}
-          className={`border-b-0 transition-colors ${
-            open === 11 ? "text-blue-500 hover:!text-blue-700" : ""
+          className={`bg-white  p-5 h-[50px] rounded-lg  transition-colors ${
+            open === 11 ? "text-white bg-blue-500 p-5" : ""
           }`}
         >
           Con Dentist
@@ -199,11 +199,11 @@ const RevenueSourceOne = () => {
       </Accordion>
       <Accordion
         open={open === 12}
-        className="rounded-lg border border-blue-gray-100 px-4 mb-2"      >
+        className="rounded-lg px-4 mb-2"      >
         <AccordionHeader
           onClick={() => handleOpen(12)}
-          className={`border-b-0 transition-colors ${
-            open === 12 ? "text-blue-500 hover:!text-blue-700" : ""
+          className={`bg-white  p-5 h-[50px] rounded-lg  transition-colors ${
+            open === 12 ? "text-white bg-blue-500 p-5" : ""
           }`}
         >
           Dermatology (Skin)
@@ -214,11 +214,11 @@ const RevenueSourceOne = () => {
       </Accordion>
       <Accordion
         open={open === 13}
-        className="rounded-lg border border-blue-gray-100 px-4 mb-2"      >
+        className="rounded-lg px-4 mb-2"      >
         <AccordionHeader
           onClick={() => handleOpen(13)}
-          className={`border-b-0 transition-colors ${
-            open === 13 ? "text-blue-500 hover:!text-blue-700" : ""
+          className={`bg-white  p-5 h-[50px] rounded-lg  transition-colors ${
+            open === 13 ? "text-white bg-blue-500 p-5" : ""
           }`}
         >
           Con Opthalmology
@@ -229,11 +229,11 @@ const RevenueSourceOne = () => {
       </Accordion>
       <Accordion
         open={open === 14}
-        className="rounded-lg border border-blue-gray-100 px-4 mb-2"      >
+        className="rounded-lg px-4 mb-2"      >
         <AccordionHeader
           onClick={() => handleOpen(14)}
-          className={`border-b-0 transition-colors ${
-            open === 14 ? "text-blue-500 hover:!text-blue-700" : ""
+          className={`bg-white  p-5 h-[50px] rounded-lg  transition-colors ${
+            open === 14 ? "text-white bg-blue-500 p-5" : ""
           }`}
         >
           Emergency Medicine (Specialist)
@@ -244,11 +244,11 @@ const RevenueSourceOne = () => {
       </Accordion>
       <Accordion
         open={open === 15}
-        className="rounded-lg border border-blue-gray-100 px-4 mb-2"      >
+        className="rounded-lg px-4 mb-2"      >
         <AccordionHeader
           onClick={() => handleOpen(15)}
-          className={`border-b-0 transition-colors ${
-            open === 15 ? "text-blue-500 hover:!text-blue-700" : ""
+          className={`bg-white  p-5 h-[50px] rounded-lg  transition-colors ${
+            open === 15 ? "text-white bg-blue-500 p-5" : ""
           }`}
         >
           Dietician & Nutrition Clinic
@@ -259,12 +259,12 @@ const RevenueSourceOne = () => {
       </Accordion>
       <Accordion
         open={open === 16}
-        className="rounded-lg border border-blue-gray-100 px-4"
+        className="rounded-lg px-4 mb-2"
       >
         <AccordionHeader
           onClick={() => handleOpen(16)}
-          className={`border-b-0 transition-colors ${
-            open === 16 ? "text-blue-500 hover:!text-blue-700" : ""
+          className={`bg-white  p-5 h-[50px] rounded-lg  transition-colors ${
+            open === 16 ? "text-white bg-blue-500 p-5" : ""
           }`}
         >
           Revenue (p.a)
