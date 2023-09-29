@@ -53,7 +53,7 @@ const ProjectManagement = () => {
     return (
         <>
             <div className={active ? "" : "hidden"}>
-                <div style={{ boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px" }} className='p-2 rounded-sm w-full'>
+                <div style={{ boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px" }} className='p-2 rounded-sm w-full bg-white px-6'>
                     <div style={{ textAlign: "end" }}>
                         <button>
                             <BsFillXSquareFill
@@ -69,10 +69,10 @@ const ProjectManagement = () => {
                     >
                         Hello, John Doe
                     </h5>
-                    <br />
+                    {/* <br /> */}
                     <p className="text-[18px] font-helvetica-neue text-black-body text-left" style={{ fontFamily: " Poppins" }}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                        vulputate libero et velit interdum, ac aliquet odio mattis.
+                        vulputate libero et velit interdum, <br /> ac aliquet odio mattis.
                     </p>
                 </div>
             </div>

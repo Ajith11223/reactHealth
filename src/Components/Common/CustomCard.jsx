@@ -3,6 +3,7 @@ import { Box, styled, Typography, Button } from "@mui/material";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { BiRightIndent } from "react-icons/bi";
 import './CustomCard.css'
+import procjectIcon from '../../Images/procjectIcon.png'
 
 const CustomCard = ({ img, date, item, likes, heart, share }) => {
   const ServiceBox = styled(Box)(({ theme }) => ({
@@ -26,6 +27,9 @@ const CustomCard = ({ img, date, item, likes, heart, share }) => {
       "&.dots-icon": {
         color: "white", // Change color to white on hover 
       },
+      "&.butt":{
+        color:"white"
+      }
       
     },
   }));
@@ -45,6 +49,8 @@ const CustomCard = ({ img, date, item, likes, heart, share }) => {
       alignItems: "center",
       textAlign: "center",
     },
+    
+
   }));
   const [isActive, setIsActive] = useState(true);
 
@@ -81,12 +87,13 @@ const CustomCard = ({ img, date, item, likes, heart, share }) => {
         
       >
         <ImgContainer>
-          {/* <img
-            src={img}
+          <img
+            src={procjectIcon}
             alt=""
+            style={{ fontSize: "44px" }}
             
-          /> */}
-          <BiRightIndent style={{ fontSize: "20px" }} className="abc"/>
+          />
+          {/* <BiRightIndent  className="abc"/> */}
         </ImgContainer>
         <BsThreeDotsVertical className="dots-icon" style={{ height: "20px", width: "20px" ,marginBottom:"15px",marginRight:"15px",color:"black"}} />
       </div>
@@ -95,13 +102,14 @@ const CustomCard = ({ img, date, item, likes, heart, share }) => {
         <CustomBox>
           <Box>
             <Typography variant="body2" sx={{ my: 2, marginTop: "90px" }}>
+              <div style={{display:"flex",flexDirection:"column",textAlign:"start",alignItems:"start",justifyContent:"start"}}>
               <b>{item}</b>
-              <br />
-              <b style={{ marginRight: "11px" }}>{date}</b>
+              <b style={{ marginRight: "11px" }}>{"12/03/2022"}</b>
+              </div>
             </Typography>
           </Box>
           <Box sx={{ marginTop: "115px" }}>
-            <Button style={buttonStyles}  onClick={toggleActive}>
+            <Button style={buttonStyles} className="butt" onClick={toggleActive}>
               {isActive ? "Active" : "Inactive"}
             </Button>
           </Box>

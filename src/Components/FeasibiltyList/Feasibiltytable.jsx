@@ -37,7 +37,7 @@ const FeasibilityTable = ({ feasibilityData,projectId }) => {
                         </th>
                     </tr>
                 </thead>
-                <br />
+                {/* <br /> */}
                 <tbody className="bg-white divide-y divide-gray-200 space-y-4 rounded-lg border-none ">
                     {feasibilityData?.map((item) => {
                         return (
@@ -46,7 +46,7 @@ const FeasibilityTable = ({ feasibilityData,projectId }) => {
                                 <tr
                                     key={item?.id}
                                     style={{
-                                        border: "10px solid rgb(243 244 246)",
+                                        border: "15px solid rgb(243 244 246)",
                                         borderRadius: "10px",
                                     }}
 

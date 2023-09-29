@@ -28,7 +28,7 @@ const FeasibiltyReport = () => {
               >
                 <FormWizard.TabContent title="General Assumptions">
                   <div>
-                    <GeneralAssumption/>
+                    {/* <GeneralAssumption/> */}
                   </div>
                 </FormWizard.TabContent>
                 <div title="Assumption Income">
