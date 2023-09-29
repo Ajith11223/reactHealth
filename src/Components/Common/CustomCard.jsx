@@ -6,6 +6,7 @@ import './CustomCard.css'
 import procjectIcon from '../../Images/procjectIcon.png'
 
 const CustomCard = ({ img, date, item, likes, heart, share }) => {
+
   const ServiceBox = styled(Box)(({ theme }) => ({
     borderRadius: "16px",
     width: "345px",
@@ -20,17 +21,18 @@ const CustomCard = ({ img, date, item, likes, heart, share }) => {
       boxShadow: "0 0 5px rgba(0,0,0,0.2)",
       transform: "scale(1.05)",
       transition: "all 0.3s ease-in-out",
-      color:"white",
+      color: "white",
       "& img": {
         filter: "brightness(0) invert(1)", // Change image color to white on hover
       },
       "&.dots-icon": {
-        color: "white", // Change color to white on hover 
+        filter: "brightness(0) invert(1)" // Change color to white on hover 
       },
-      "&.butt":{
-        color:"white"
+      "& Button": {
+        filter: "brightness(0) invert(1)", // Change image color to white on hover
       }
-      
+
+
     },
   }));
   const ImgContainer = styled(Box)(() => ({
@@ -49,7 +51,7 @@ const CustomCard = ({ img, date, item, likes, heart, share }) => {
       alignItems: "center",
       textAlign: "center",
     },
-    
+
 
   }));
   const [isActive, setIsActive] = useState(true);
@@ -66,7 +68,7 @@ const CustomCard = ({ img, date, item, likes, heart, share }) => {
     width: "79px",
     opacity: isActive ? 1 : 0.8,
     marginRight: "10px",
-  
+    marginTop: "20px"
   };
   return (
     <ServiceBox
@@ -76,7 +78,7 @@ const CustomCard = ({ img, date, item, likes, heart, share }) => {
         pt: "20px",
         pb: "10px",
       }}
-      
+
     >
       <div
         style={{
@@ -84,35 +86,41 @@ const CustomCard = ({ img, date, item, likes, heart, share }) => {
           justifyContent: "space-between",
           alignItems: "center",
         }}
-        
+
       >
         <ImgContainer>
           <img
             src={procjectIcon}
             alt=""
             style={{ fontSize: "44px" }}
-            
+
           />
           {/* <BiRightIndent  className="abc"/> */}
         </ImgContainer>
-        <BsThreeDotsVertical className="dots-icon" style={{ height: "20px", width: "20px" ,marginBottom:"15px",marginRight:"15px",color:"black"}} />
+        <b>
+          <BsThreeDotsVertical className="dots-icon" style={{ height: "20px", width: "20px", marginBottom: "15px", marginRight: "15px", fontWeight: "bold" }} />
+
+        </b>
       </div>
 
       <Box sx={{ padding: "1 rem", marginLeft: "15px" }}>
         <CustomBox>
           <Box>
-            <Typography variant="body2" sx={{ my: 2, marginTop: "90px" }}>
-              <div style={{display:"flex",flexDirection:"column",textAlign:"start",alignItems:"start",justifyContent:"start"}}>
-              <b>{item}</b>
-              <b style={{ marginRight: "11px" }}>{"12/03/2022"}</b>
+            <Typography variant="body2" sx={{ marginTop: "90px", display: "flex", justifyContent: "space-between", gap: "130px" }}>
+              <div style={{ display: "flex", textAlign: "start", flexDirection: "column" }}>
+                <b style={{ fontSize: "20px" }}>{item}</b>
+                <p style={{ marginRight: "11px", fontSize: "16px", fontFamily: "poppins" }}>{"12 03 2022"}</p>
+
               </div>
+
+              <Box >
+                <Button style={buttonStyles} onClick={toggleActive}>
+                  {isActive ? "Active" : "Inactive"}
+                </Button>
+              </Box>
             </Typography>
           </Box>
-          <Box sx={{ marginTop: "115px" }}>
-            <Button style={buttonStyles} className="butt" onClick={toggleActive}>
-              {isActive ? "Active" : "Inactive"}
-            </Button>
-          </Box>
+
         </CustomBox>
       </Box>
     </ServiceBox>

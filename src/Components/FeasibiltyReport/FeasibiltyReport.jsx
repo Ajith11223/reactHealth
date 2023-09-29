@@ -13,7 +13,7 @@ const FeasibiltyReport = () => {
         <div className="w-full bg-white rounded-lg">
           <div style={{ width: "100%", overflowX: "auto" }}>
             <div
-              className="flex mb-4 justify-center bg-none w-full p-10 m-5"
+              className="flex mb-4 justify-center bg-none w-full p-"
               style={{
                 borderRadius: "16px",
                 justifyContent: "space-evenly",
@@ -23,6 +23,7 @@ const FeasibiltyReport = () => {
               <FormWizard
                 shape="circle"
                 color="#4A4BE4"
+                // stepSize="xs"
                 // onComplete={handleComplete}
                 // onTabChange={tabChanged}
               >
@@ -90,7 +91,7 @@ const FeasibiltyReport = () => {
       </>
 
       {/*  content area */}
-      <div className="p-5">
+      <div className="">
         <div>
           {wizardState == 1 ? (
             <GeneralAssumption />

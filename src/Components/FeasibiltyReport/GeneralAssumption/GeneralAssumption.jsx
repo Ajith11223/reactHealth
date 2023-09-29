@@ -140,17 +140,18 @@ const GeneralAssumption = () => {
         }
     }
     return (
-        <div className="container bg-gray-100 w-full flex p-2">
-            <div>
-                <h5 className="ml-11" style={{ fontFamily: "poppins",fontWeight:"700",fontSize:"24px" }}>General Assumptions</h5>
+        <div className=" bg-gray-100 w-full flex " style={{justifyContent:"space-between"}}>
+            <div >
                 <div
                     style={{
                         marginTop: "20px",
-                        marginRight: "50px",
-                        paddingInline: "40px",
+                        marginRight: "150px",
+                        // paddingInline: "40px",
+                        textAlign:"start"
                     }}
                 >
-                    <table className="min-w-full divide-y divide-gray-200 " id="custom-table">
+                    <h5 className="" style={{ fontFamily: "poppins",fontWeight:"700",fontSize:"24px" }}>General Assumptions</h5>
+                    <table className="min-w-full divide-y divide-gray-200 " id="custom-table" style={{minWidth:"800px"}}>
                         <thead className="bg-white ">
                             <tr className="">
                                 <th className="px-6 py-3 text-left rounded-l-lg">
