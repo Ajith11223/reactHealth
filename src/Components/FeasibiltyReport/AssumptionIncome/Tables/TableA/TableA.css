@@ -1,0 +1,32 @@
+.container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .left {
+    flex: 0 0 60%; /* 60% width */
+    background-color: #f0f0f0; /* Add styling as needed */
+  }
+  
+  .right {
+    flex: 0 0 40%; /* 40% width */
+    background-color: #ffffff; /* Add styling as needed */
+  }
+  
+  /* Add media queries for responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Stack on small screens */
+    }
+  
+    .left,
+    .right {
+      flex: 1; /* Take full width on small screens */
+    }
+  }
+  #custom-table {
+    border-collapse: separate;
+    border-spacing:0px 10px; /* Gap between rows and between thead and tbody */
+  }
+
+  
