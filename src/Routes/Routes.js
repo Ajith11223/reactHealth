@@ -1,4 +1,5 @@
 import FeasibilityList from "../Components/FeasibiltyList/FeasibilityList";
+import AssumptionIncome from "../Components/FeasibiltyReport/AssumptionIncome/AssumptionIncome";
 import FeasibiltyReport from "../Components/FeasibiltyReport/FeasibiltyReport";
 import Home from "../Components/Home/Home";
 import Login from "../Components/Login/Login";
@@ -18,6 +19,7 @@ const publicRoutes = [
     { path: "/user/project", component: <ProjectManagement /> },
     { path: "/user/project/:id", component: <FeasibilityList /> },
     { path: "/user/project/:id/:fid", component: <FeasibiltyReport /> },
+    { path: "/user/project/:id/:fid/assumptionIncome", component: <AssumptionIncome/> }
 
   ]
 

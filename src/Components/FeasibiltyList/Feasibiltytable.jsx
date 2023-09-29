@@ -15,7 +15,7 @@ const FeasibilityTable = ({ feasibilityData,projectId }) => {
             style={{ marginTop: "20px", marginRight: "50px", paddingInline: "40px",minHeight:"85vh",overflowX:"scroll" }}
         >
             
-            <table className="min-w-full divide-y divide-gray-200 rounded-lg" >
+            <table className="min-w-full divide-y divide-gray-200" >
                 <thead className="bg-white ">
                     <tr className="">
                         <th className="px-6 py-3 text-left rounded-l-lg">
