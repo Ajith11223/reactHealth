@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { createGeneralAssumption, getGeneralAssumption, updateAssumptionData } from "../../../API/ApiRequest";
+import './GeneralAssumptions.css'
 
 const GeneralAssumption = () => {
     const user = useSelector((state) => state.counter.user)
@@ -150,10 +151,10 @@ const GeneralAssumption = () => {
                         paddingInline: "40px",
                     }}
                 >
-                    <table className="min-w-full divide-y divide-gray-200 ">
+                    <table className="min-w-full divide-y divide-gray-200 " id="custom-table">
                         <thead className="bg-white ">
                             <tr className="">
-                                <th className="px-6 py-3 text-left ">
+                                <th className="px-6 py-3 text-left rounded-l-lg">
                                     <span>Sl no.</span>
                                 </th>
                                 <th className="px-6 py-3 text-left ">
@@ -162,7 +163,7 @@ const GeneralAssumption = () => {
                                 <th className="px-6 py-3 text-left ">
                                     <span>Assumption unit</span>
                                 </th>
-                                <th className="px-6 py-3 text-left ">
+                                <th className="px-6 py-3 text-left rounded-r-lg">
                                     <span>Assumption value</span>
                                 </th>
                             </tr>
@@ -172,30 +173,20 @@ const GeneralAssumption = () => {
                 return ( */}
                             <>
                                 <tr
-                                    style={{
-                                        border: "10px solid rgb(243, 244, 246)",
-                                        borderRadius: "20px !important",
-                                    }}
-                                    className="border-gray-500 rounded-l-lg"
                                 >
-                                    <td className="px-6 py-4 justify-center ">
+                                    <td className="px-6 py-4 justify-center rounded-l-lg">
                                       1
                                     </td>
                                     <td className="px-6 py-4">{"% of non-insurance based patients in the footfall"}</td>
                                     <td className="px-6 py-4">{"%"}</td>
-                                    <td className="px-6 py-4" >{assumption?.nonInsuranceBased} </td>
+                                    <td className="px-6 py-4 rounded-r-lg" >{assumption?.nonInsuranceBased} </td>
                                 </tr>
                             </>
 
                             <>
                                 <tr
-                                    style={{
-                                        border: "10px solid rgb(243 244 246)",
-                                        borderRadius: "10px",
-                                    }}
-                                    className="border-gray-500"
                                 >
-                                    <td className="px-6 py-4 justify-center">
+                                    <td className="px-6 py-4 justify-center rounded-l-lg">
                                       2
                                     </td>
                                     <td className="px-6 py-4">{"% of patients with insurance"}</td>
@@ -206,11 +197,6 @@ const GeneralAssumption = () => {
 
                             <>
                                 <tr
-                                    style={{
-                                        border: "10px solid rgb(243 244 246)",
-                                        borderRadius: "10px",
-                                    }}
-                                    className="border-gray-500"
                                 >
                                     <td className="px-6 py-4 justify-center rounded-l-lg">
                                        3
@@ -223,11 +209,6 @@ const GeneralAssumption = () => {
 
                             <>
                                 <tr
-                                    style={{
-                                        border: "10px solid rgb(243 244 246)",
-                                        borderRadius: "10px",
-                                    }}
-                                    className="border-gray-500 rounded-l-lg"
                                 >
                                     <td className="px-6 py-4 justify-center rounded-l-lg">
                                       4
@@ -240,11 +221,6 @@ const GeneralAssumption = () => {
 
                             <>
                                 <tr
-                                    style={{
-                                        border: "10px solid rgb(243 244 246)",
-                                        borderRadius: "10px",
-                                    }}
-                                    className="border-gray-500"
                                 >
                                     <td className="px-6 py-4 justify-center rounded-l-lg">
                                      5
@@ -257,11 +233,6 @@ const GeneralAssumption = () => {
 
                             <>
                                 <tr
-                                    style={{
-                                        border: "10px solid rgb(243 244 246)",
-                                        borderRadius: "10px",
-                                    }}
-                                    className="border-gray-500"
                                 >
                                     <td className="px-6 py-4 justify-center rounded-l-lg">
                                        6
@@ -274,11 +245,6 @@ const GeneralAssumption = () => {
 
                             <>
                                 <tr
-                                    style={{
-                                        border: "10px solid rgb(243 244 246)",
-                                        borderRadius: "10px",
-                                    }}
-                                    className="border-gray-500"
                                 >
                                     <td className="px-6 py-4 justify-center rounded-l-lg">
                                        7
@@ -291,11 +257,6 @@ const GeneralAssumption = () => {
 
                             <>
                                 <tr
-                                    style={{
-                                        border: "10px solid rgb(243 244 246)",
-                                        borderRadius: "10px",
-                                    }}
-                                    className="border-gray-500"
                                 >
                                     <td className="px-6 py-4 justify-center rounded-l-lg">
                                       8
@@ -308,11 +269,6 @@ const GeneralAssumption = () => {
 
                             <>
                                 <tr
-                                    style={{
-                                        border: "10px solid rgb(243 244 246)",
-                                        borderRadius: "10px",
-                                    }}
-                                    className="border-gray-500"
                                 >
                                     <td className="px-6 py-4 justify-center rounded-l-lg">
                                        9
