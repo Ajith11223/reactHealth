@@ -17,7 +17,6 @@ const ProjectManagement = () => {
     // user fro  redux store
     const user = useSelector((state) => state.counter.user)
 
-
     const [userProjects, setUserProjects] = useState([])
 
     const fetchData = async () => {
@@ -28,6 +27,7 @@ const ProjectManagement = () => {
             if(user.id){
                 const { data } = await testApi.get(`/project/getPrj/${user.id}`)
                 setUserProjects(data?.getData)
+                console.log(data)
             }
             
         } catch (error) {
@@ -44,7 +44,7 @@ const ProjectManagement = () => {
     // functionalty initialy fetching
     useEffect(() => {
         fetchData()
-    }, [user.id])
+    },[user.id])
 
     // navgation add
     const handleRoute =(projectId)=>{

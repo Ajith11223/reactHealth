@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Box, styled, Typography, Button } from "@mui/material";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { BiRightIndent } from "react-icons/bi";
+import './CustomCard.css'
 
 const CustomCard = ({ img, date, item, likes, heart, share }) => {
   const ServiceBox = styled(Box)(({ theme }) => ({
@@ -18,10 +19,11 @@ const CustomCard = ({ img, date, item, likes, heart, share }) => {
       boxShadow: "0 0 5px rgba(0,0,0,0.2)",
       transform: "scale(1.05)",
       transition: "all 0.3s ease-in-out",
+      color:"white",
       "& img": {
         filter: "brightness(0) invert(1)", // Change image color to white on hover
       },
-      "& .dots-icon": {
+      "&.dots-icon": {
         color: "white", // Change color to white on hover 
       },
       
@@ -58,6 +60,7 @@ const CustomCard = ({ img, date, item, likes, heart, share }) => {
     width: "79px",
     opacity: isActive ? 1 : 0.8,
     marginRight: "10px",
+  
   };
   return (
     <ServiceBox
@@ -67,6 +70,7 @@ const CustomCard = ({ img, date, item, likes, heart, share }) => {
         pt: "20px",
         pb: "10px",
       }}
+      
     >
       <div
         style={{
@@ -74,6 +78,7 @@ const CustomCard = ({ img, date, item, likes, heart, share }) => {
           justifyContent: "space-between",
           alignItems: "center",
         }}
+        
       >
         <ImgContainer>
           {/* <img
@@ -81,7 +86,7 @@ const CustomCard = ({ img, date, item, likes, heart, share }) => {
             alt=""
             
           /> */}
-          <BiRightIndent style={{ fontSize: "20px", color: "black" }}/>
+          <BiRightIndent style={{ fontSize: "20px" }} className="abc"/>
         </ImgContainer>
         <BsThreeDotsVertical className="dots-icon" style={{ height: "20px", width: "20px" ,marginBottom:"15px",marginRight:"15px",color:"black"}} />
       </div>
@@ -96,7 +101,7 @@ const CustomCard = ({ img, date, item, likes, heart, share }) => {
             </Typography>
           </Box>
           <Box sx={{ marginTop: "115px" }}>
-            <Button style={buttonStyles} onClick={toggleActive}>
+            <Button style={buttonStyles}  onClick={toggleActive}>
               {isActive ? "Active" : "Inactive"}
             </Button>
           </Box>
