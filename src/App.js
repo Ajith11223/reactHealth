@@ -23,12 +23,12 @@ function App() {
 
               <Route path={route.path}
                 element={
-                  // <UserMiddleware>
+                  <UserMiddleware>
 
                   <LayoutUser>
                     {route.component}
                   </LayoutUser>
-                  // </UserMiddleware>
+                   </UserMiddleware>
                   
                 }
                   key={id}

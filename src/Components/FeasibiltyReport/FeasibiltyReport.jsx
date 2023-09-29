@@ -26,7 +26,9 @@ const FeasibiltyReport = () => {
                 // onTabChange={tabChanged}
               >
                 <FormWizard.TabContent title="General Assumptions">
-                  <div>{/* <GeneralAssumption/> */}</div>{" "}
+                  <div>
+                    <GeneralAssumption/>
+                  </div>
                 </FormWizard.TabContent>
                 <div title="Assumption Income">
                   <FormWizard.TabContent title="Assumption Income">
