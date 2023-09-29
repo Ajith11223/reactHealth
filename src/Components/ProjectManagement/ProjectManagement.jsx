@@ -78,6 +78,9 @@ const ProjectManagement = () => {
             </div>
 
             {/* card area */}
+           
+            <ProjectModal openModal={openModal} closeModal={closeModal} />
+            <div class="container mx-auto p-8">
             <div style={{ display: "flex", justifyContent: "space-between" }} className='m-5' >
                 <h4 style={{ fontFamily: "poppins", fontWeight: "550" }}
                     className="top-0 left-0  text-[#262628] text-[24px] tracking-[-0.84px] leading-[normal]"
@@ -99,8 +102,6 @@ const ProjectManagement = () => {
                     >Add new project</button>
                 </div>
             </div>
-            <ProjectModal openModal={openModal} closeModal={closeModal} />
-            <div class="container mx-auto p-8">
                 <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-5">
 
                     {

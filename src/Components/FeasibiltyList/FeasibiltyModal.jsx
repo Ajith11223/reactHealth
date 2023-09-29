@@ -58,7 +58,7 @@ import { createFeasiblity } from "../../API/ApiRequest";
           <div className="modal-content py-4 text-left px-6">
             {/* Modal Header */}
             <div className="flex justify-between items-center pb-3">
-              <p className="text-2xl font-bold">Add Project</p>
+              <p className="text-2xl font-bold">Add Feasibilty</p>
               <button
                 onClick={handleClose}
                 className="modal-close"
