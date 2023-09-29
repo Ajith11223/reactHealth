@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import GeneralAssumption from "./GeneralAssumption/GeneralAssumption";
 import AssumptionIncome from "./AssumptionIncome/AssumptionIncome";
 import FormWizard from "react-form-wizard-component";
+import "./FeasibilityReport.css"
 
 const FeasibiltyReport = () => {
   // state changing
