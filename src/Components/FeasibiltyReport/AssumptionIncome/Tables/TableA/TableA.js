@@ -40,18 +40,24 @@ const TableA = () => {
           overflowX: "auto", // Enable horizontal scrolling
         }}
       >
-        <table className="min-w-full divide-y divide-gray-200 " id="custom-table">
+        <table
+          className="min-w-full divide-y divide-gray-200 "
+          id="custom-table"
+        >
           <thead>
-            <tr className="">
+            <tr>
               {allColumns.map((column, index) => (
                 <th
                   key={index}
                   className={`px-6  py-4 text-left ${
-                    index === 0 ? 'first:rounded-l-lg' : ''} ${
-                    index === allColumns.length - 1 ? 'last:rounded-r-lg ' : ''}`}   
-                                   style={{
+                    index === 0 ? "first:rounded-l-lg" : ""
+                  } ${
+                    index === allColumns.length - 1 ? "last:rounded-r-lg " : ""
+                  }`}
+                  style={{
                     minWidth: index === 0 ? "300px" : "auto",
-                    backgroundColor :"white",
+                    backgroundColor: "white",
+                    whiteSpace: "nowrap", // Ensure text doesn't wrap
                   }}
                 >
                   {column}
@@ -59,21 +65,18 @@ const TableA = () => {
               ))}
             </tr>
           </thead>
-          <tbody className="bg-white divide-y divide-gray-200 rounded-lg space-y-4 border-none">
+          <tbody className="bg-white divide-y divide-gray-200  border-none">
             {Object.keys(data[0]).map((key) => (
-              <tr
-                key={key}
-              >
-                <td
-                  className="px-6 py-4 text-left rounded-l-lg"
-                >
-                 <b> {key}</b>
+              <tr key={key}>
+                <td className="px-6 py-4 text-left rounded-l-lg">
+                  <b> {key}</b>
                 </td>
                 {allColumns.slice(1).map((column, index) => (
                   <td
                     key={index}
                     className={`px-6 py-4 justify-center ${
-                      index === allColumns.length - 1 ? 'last:rounded-r-lg ' : ''}`}
+                      index === allColumns.length - 1 ? "rounded-r-lg" : ""
+                    }`}
                   >
                     {additionalData[column]}
                   </td>

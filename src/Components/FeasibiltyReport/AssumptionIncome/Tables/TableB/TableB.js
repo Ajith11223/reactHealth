@@ -40,17 +40,21 @@ const TableB = () => {
           overflowX: "auto", // Enable horizontal scrolling
         }}
       >
-        <table className="min-w-full divide-y divide-gray-200 rounded-lg">
+        <table className="min-w-full divide-y divide-gray-200 "id="custom-table">
           <thead>
             <tr>
               {allColumns.map((column, index) => (
                 <th
                   key={index}
-                  className="px-6 py-4 text-left"
+                  className={`px-6  py-4 text-left ${
+                    index === 0 ? "first:rounded-l-lg" : ""
+                  } ${
+                    index === allColumns.length - 1 ? "last:rounded-r-lg " : ""
+                  }`}
                   style={{
-                    border: "10px solid rgb(243 244 246)",
-                    borderRadius: "10px",
                     minWidth: index === 0 ? "300px" : "auto",
+                    backgroundColor: "white",
+                    whiteSpace: "nowrap", // Ensure text doesn't wrap
                   }}
                 >
                   {column}
@@ -58,34 +62,22 @@ const TableB = () => {
               ))}
             </tr>
           </thead>
-          <tbody className="bg-white divide-y divide-gray-200 rounded-lg space-y-4 border-none">
+          <tbody className="bg-white divide-y divide-gray-200 border-none">
             {Object.keys(data[0]).map((key) => (
               <tr
                 key={key}
-                style={{
-                  border: "10px solid rgb(243 244 246)",
-                  borderRadius: "10px",
-                }}
-                className="border-gray-500"
               >
                 <td
-                  className="px-6 py-4 text-left"
-                  style={{
-                    border: "10px solid rgb(243 244 246)",
-                    borderRadius: "10px",
-                  }}
+                  className="px-6 py-4 text-left rounded-l-lg"
                 >
                  <b> {key}</b>
                 </td>
                 {allColumns.slice(1).map((column, index) => (
                   <td
                     key={index}
-                    className="px-6 py-4 justify-center"
-                    style={{
-                      border: "10px solid rgb(243 244 246)",
-                      borderRadius: "10px",
-                    }}
-                  >
+                    className={`px-6 py-4 justify-center ${
+                      index === allColumns.length - 1 ? "rounded-r-lg" : ""
+                    }`}>
                     {additionalData[column]}
                   </td>
                 ))}
