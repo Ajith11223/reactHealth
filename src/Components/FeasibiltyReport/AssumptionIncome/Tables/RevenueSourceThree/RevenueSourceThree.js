@@ -19,15 +19,15 @@ const RevenueSourceThree = () => {
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
   return (
-    <div className=" p-4">
+    <div className="p-4 rounded-b-lg bg-gray-50" >
       <Accordion
         open={open === 1}
-        className="mb-2 rounded-lg border border-blue-gray-100 px-4 "
+        className="mb-2 rounded-lg px-4 "
       >
         <AccordionHeader
           onClick={() => handleOpen(1)}
-          className={`border-b-0 transition-colors ${
-            open === 1 ? "text-blue-500 hover:!text-blue-700" : ""
+          className={`bg-white  p-5 h-[50px] rounded-lg  transition-colors ${
+            open === 1 ? "text-white bg-blue-500 p-5" : ""
           }`}
         >
           Diagnostics -  Pathology & Phlebetomy (Outsourced)
@@ -38,12 +38,12 @@ const RevenueSourceThree = () => {
       </Accordion>
       <Accordion
         open={open === 2}
-        className="mb-2 rounded-lg border border-blue-gray-100 px-4"
+        className="mb-2 rounded-lg px-4"
       >
         <AccordionHeader
           onClick={() => handleOpen(2)}
-          className={`border-b-0 transition-colors ${
-            open === 2 ? "text-blue-500 hover:!text-blue-700" : ""
+          className={`bg-white  p-5 h-[50px] rounded-lg  transition-colors ${
+            open === 2 ? "text-white bg-blue-500 p-5" : ""
           }`}
         >
           Imaging (X-Ray, Ultrasound, DXA scan, MRI etc)
@@ -54,12 +54,12 @@ const RevenueSourceThree = () => {
       </Accordion>
       <Accordion
         open={open === 3}
-        className="rounded-lg border border-blue-gray-100 px-4 mb-2"
+        className="rounded-lg px-4 mb-2"
       >
         <AccordionHeader
           onClick={() => handleOpen(3)}
-          className={`border-b-0 transition-colors ${
-            open === 3 ? "text-blue-500 hover:!text-blue-700" : ""
+          className={`bg-white  p-5 h-[50px] rounded-lg  transition-colors ${
+            open === 3 ? "text-white bg-blue-500 p-5" : ""
           }`}
         >
           Echo Cardiogram
@@ -70,12 +70,12 @@ const RevenueSourceThree = () => {
       </Accordion>
       <Accordion
         open={open === 4}
-        className="rounded-lg border border-blue-gray-100 px-4 mb-2"
+        className="rounded-lg px-4 mb-2"
       >
         <AccordionHeader
           onClick={() => handleOpen(4)}
-          className={`border-b-0 transition-colors ${
-            open === 4 ? "text-blue-500 hover:!text-blue-700" : ""
+          className={`bg-white  p-5 h-[50px] rounded-lg  transition-colors ${
+            open === 4 ? "text-white bg-blue-500 p-5" : ""
           }`}
         >
           Stress Tests
@@ -86,12 +86,12 @@ const RevenueSourceThree = () => {
       </Accordion>
       <Accordion
         open={open === 5}
-        className="rounded-lg border border-blue-gray-100 px-4 mb-2"
+        className="rounded-lg px-4 mb-2"
       >
         <AccordionHeader
           onClick={() => handleOpen(5)}
-          className={`border-b-0 transition-colors ${
-            open === 5 ? "text-blue-500 hover:!text-blue-700" : ""
+          className={`bg-white  p-5 h-[50px] rounded-lg  transition-colors ${
+            open === 5 ? "text-white bg-blue-500 p-5" : ""
           }`}
         >
           Holter Tests
@@ -102,12 +102,12 @@ const RevenueSourceThree = () => {
       </Accordion>
       <Accordion
         open={open === 6}
-        className="rounded-lg border border-blue-gray-100 px-4 mb-2"
+        className="rounded-lg px-4 mb-2"
       >
         <AccordionHeader
           onClick={() => handleOpen(6)}
-          className={`border-b-0 transition-colors ${
-            open === 6 ? "text-blue-500 hover:!text-blue-700" : ""
+          className={`bg-white  p-5 h-[50px] rounded-lg  transition-colors ${
+            open === 6 ? "text-white bg-blue-500 p-5" : ""
           }`}
         >
            Transesophageal & Dobutamine Stress Test
@@ -118,12 +118,12 @@ const RevenueSourceThree = () => {
       </Accordion>
       <Accordion
         open={open === 7}
-        className="rounded-lg border border-blue-gray-100 px-4 mb-2"
+        className="rounded-lg px-4 mb-2"
       >
         <AccordionHeader
           onClick={() => handleOpen(7)}
-          className={`border-b-0 transition-colors ${
-            open === 7 ? "text-blue-500 hover:!text-blue-700" : ""
+          className={`bg-white  p-5 h-[50px] rounded-lg  transition-colors ${
+            open === 7 ? "text-white bg-blue-500 p-5" : ""
           }`}
         >
           E C G
@@ -134,12 +134,12 @@ const RevenueSourceThree = () => {
       </Accordion>
       <Accordion
         open={open === 8}
-        className="rounded-lg border border-blue-gray-100 px-4"
+        className="rounded-lg px-4 mb-2"
       >
         <AccordionHeader
           onClick={() => handleOpen(8)}
-          className={`border-b-0 transition-colors ${
-            open === 8 ? "text-blue-500 hover:!text-blue-700" : ""
+          className={`bg-white  p-5 h-[50px] rounded-lg  transition-colors ${
+            open === 8 ? "text-white bg-blue-500 p-5" : ""
           }`}
         >
           Revenue (p.a.)
