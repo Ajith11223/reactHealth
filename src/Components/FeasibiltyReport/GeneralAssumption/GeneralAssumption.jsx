@@ -1,21 +1,5 @@
-// import React from 'react'
-
-// const GeneralAssumption = () => {
-//     return (
-//         <div className="bg-white h-4/5">
-//             {/* Your content goes here */}
-//             hhh
-//         </div>
-
-//     )
-// }
-
-// export default GeneralAssumption
-
 
 import React, { useEffect, useState } from "react";
-// import "./GeneralAssumptions.css";
-// import { Button, Checkbox, Label, TextInput } from "flowbite-react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { createGeneralAssumption, getGeneralAssumption, updateAssumptionData } from "../../../API/ApiRequest";
@@ -158,7 +142,7 @@ const GeneralAssumption = () => {
     return (
         <div className="container bg-gray-100 w-full flex p-2">
             <div>
-                <h5 style={{ fontFamily: "poppins" }}>General Assumptions</h5>
+                <h5 className="ml-11" style={{ fontFamily: "poppins",fontWeight:"700",fontSize:"24px" }}>General Assumptions</h5>
                 <div
                     style={{
                         marginTop: "20px",
@@ -166,10 +150,10 @@ const GeneralAssumption = () => {
                         paddingInline: "40px",
                     }}
                 >
-                    <table className="min-w-full divide-y divide-gray-200 rounded-lg">
+                    <table className="min-w-full divide-y divide-gray-200 ">
                         <thead className="bg-white ">
                             <tr className="">
-                                <th className="px-6 py-3 text-left rounded-l-lg">
+                                <th className="px-6 py-3 text-left ">
                                     <span>Sl no.</span>
                                 </th>
                                 <th className="px-6 py-3 text-left ">
@@ -178,34 +162,24 @@ const GeneralAssumption = () => {
                                 <th className="px-6 py-3 text-left ">
                                     <span>Assumption unit</span>
                                 </th>
-                                <th className="px-6 py-3 text-left rounded-r-lg">
+                                <th className="px-6 py-3 text-left ">
                                     <span>Assumption value</span>
                                 </th>
                             </tr>
                         </thead>
-                        <br />
-                        <tbody className="bg-white divide-y divide-gray-200 space-y-4 border-none ">
+                        <tbody className="bg-white divide-y divide-gray-200  ">
                             {/* {data?.map((item) => {
                 return ( */}
                             <>
                                 <tr
                                     style={{
-                                        border: "10px solid rgb(243 244 246)",
-                                        borderRadius: "10px",
+                                        border: "10px solid rgb(243, 244, 246)",
+                                        borderRadius: "20px !important",
                                     }}
-                                    className="border-gray-500"
+                                    className="border-gray-500 rounded-l-lg"
                                 >
                                     <td className="px-6 py-4 justify-center ">
-                                        <div
-                                            style={{
-                                                width: "80px",
-                                                height: "70px",
-                                                borderRadius: "8px",
-                                                border: "10px solid #E4E5FF",
-                                            }}
-                                        >
-                                            {/* <img src={item.image} alt="" /> */}
-                                        </div>
+                                      1
                                     </td>
                                     <td className="px-6 py-4">{"% of non-insurance based patients in the footfall"}</td>
                                     <td className="px-6 py-4">{"%"}</td>
@@ -222,16 +196,7 @@ const GeneralAssumption = () => {
                                     className="border-gray-500"
                                 >
                                     <td className="px-6 py-4 justify-center">
-                                        <div
-                                            style={{
-                                                width: "80px",
-                                                height: "70px",
-                                                borderRadius: "8px",
-                                                border: "10px solid #E4E5FF",
-                                            }}
-                                        >
-                                            {/* <img src={item.image} alt="" /> */}
-                                        </div>
+                                      2
                                     </td>
                                     <td className="px-6 py-4">{"% of patients with insurance"}</td>
                                     <td className="px-6 py-4">{"%"}</td>
@@ -248,16 +213,7 @@ const GeneralAssumption = () => {
                                     className="border-gray-500"
                                 >
                                     <td className="px-6 py-4 justify-center rounded-l-lg">
-                                        <div
-                                            style={{
-                                                width: "80px",
-                                                height: "70px",
-                                                borderRadius: "8px",
-                                                border: "10px solid #E4E5FF",
-                                            }}
-                                        >
-                                            {/* <img src={item.image} alt="" /> */}
-                                        </div>
+                                       3
                                     </td>
                                     <td className="px-6 py-4">{"% of patients paying by credit card"}</td>
                                     <td className="px-6 py-4">{"%"}</td>
@@ -271,19 +227,10 @@ const GeneralAssumption = () => {
                                         border: "10px solid rgb(243 244 246)",
                                         borderRadius: "10px",
                                     }}
-                                    className="border-gray-500"
+                                    className="border-gray-500 rounded-l-lg"
                                 >
                                     <td className="px-6 py-4 justify-center rounded-l-lg">
-                                        <div
-                                            style={{
-                                                width: "80px",
-                                                height: "70px",
-                                                borderRadius: "8px",
-                                                border: "10px solid #E4E5FF",
-                                            }}
-                                        >
-                                            {/* <img src={item.image} alt="" /> */}
-                                        </div>
+                                      4
                                     </td>
                                     <td className="px-6 py-4">{"% of patients paying by cash"}</td>
                                     <td className="px-6 py-4">{"%"}</td>
@@ -300,16 +247,7 @@ const GeneralAssumption = () => {
                                     className="border-gray-500"
                                 >
                                     <td className="px-6 py-4 justify-center rounded-l-lg">
-                                        <div
-                                            style={{
-                                                width: "80px",
-                                                height: "70px",
-                                                borderRadius: "8px",
-                                                border: "10px solid #E4E5FF",
-                                            }}
-                                        >
-                                            {/* <img src={item.image} alt="" /> */}
-                                        </div>
+                                     5
                                     </td>
                                     <td className="px-6 py-4">{"Tax Rate on Taxable Profit"}</td>
                                     <td className="px-6 py-4">{"%"}</td>
@@ -326,16 +264,7 @@ const GeneralAssumption = () => {
                                     className="border-gray-500"
                                 >
                                     <td className="px-6 py-4 justify-center rounded-l-lg">
-                                        <div
-                                            style={{
-                                                width: "80px",
-                                                height: "70px",
-                                                borderRadius: "8px",
-                                                border: "10px solid #E4E5FF",
-                                            }}
-                                        >
-                                            {/* <img src={item.image} alt="" /> */}
-                                        </div>
+                                       6
                                     </td>
                                     <td className="px-6 py-4">{"Profit Taxable in the Year 1 to Year 5"}</td>
                                     <td className="px-6 py-4">{"%"}</td>
@@ -352,16 +281,7 @@ const GeneralAssumption = () => {
                                     className="border-gray-500"
                                 >
                                     <td className="px-6 py-4 justify-center rounded-l-lg">
-                                        <div
-                                            style={{
-                                                width: "80px",
-                                                height: "70px",
-                                                borderRadius: "8px",
-                                                border: "10px solid #E4E5FF",
-                                            }}
-                                        >
-                                            {/* <img src={item.image} alt="" /> */}
-                                        </div>
+                                       7
                                     </td>
                                     <td className="px-6 py-4">{"Profit Taxable in the Year 6 to Year 8"}</td>
                                     <td className="px-6 py-4">{"%"}</td>
@@ -378,16 +298,7 @@ const GeneralAssumption = () => {
                                     className="border-gray-500"
                                 >
                                     <td className="px-6 py-4 justify-center rounded-l-lg">
-                                        <div
-                                            style={{
-                                                width: "80px",
-                                                height: "70px",
-                                                borderRadius: "8px",
-                                                border: "10px solid #E4E5FF",
-                                            }}
-                                        >
-                                            {/* <img src={item.image} alt="" /> */}
-                                        </div>
+                                      8
                                     </td>
                                     <td className="px-6 py-4">{"Profit Taxable in the Year 9 to Year 10"}</td>
                                     <td className="px-6 py-4">{"%"}</td>
@@ -404,16 +315,7 @@ const GeneralAssumption = () => {
                                     className="border-gray-500"
                                 >
                                     <td className="px-6 py-4 justify-center rounded-l-lg">
-                                        <div
-                                            style={{
-                                                width: "80px",
-                                                height: "70px",
-                                                borderRadius: "8px",
-                                                border: "10px solid #E4E5FF",
-                                            }}
-                                        >
-                                            {/* <img src={item.image} alt="" /> */}
-                                        </div>
+                                       9
                                     </td>
                                     <td className="px-6 py-4">{"Profit Taxable in the Year 11 Onwards"}</td>
                                     <td className="px-6 py-4">{"%"}</td>
@@ -428,8 +330,8 @@ const GeneralAssumption = () => {
             <div
                 className="modal-container bg-white mx-auto rounded shadow-lg z-50"
                 style={{
-                    width: "378px",
-                    height: "500px",
+                    width: "485px",
+                    height: "545px",
                     top: "425px",
                     left: "496px",
                     borderRadius: "20px",
@@ -462,10 +364,11 @@ const GeneralAssumption = () => {
                                 type="text"
                                 id="projectName"
                                 name="projectName"
-                                className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                className="appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 placeholder="Project Name"
                                 value={patientWithInsurance}
                                 onChange={(ev) => setPatientWithInsurence(ev.target.value)}
+                                style={{borderRadius:"13px",height:"45px"}}
                             />
                         </div>
                         <div>
@@ -483,6 +386,8 @@ const GeneralAssumption = () => {
                                 placeholder="Project Name"
                                 value={payByCash}
                                 onChange={(ev) => setPayByCash(ev.target.value)}
+                                style={{borderRadius:"13px",height:"45px"}}
+
                             />
                         </div>
                         <div>
@@ -500,6 +405,8 @@ const GeneralAssumption = () => {
                                 value={taxProfit}
                                 onChange={(ev) => setTaxProfit(ev.target.value)}
                                 className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                style={{borderRadius:"13px",height:"45px"}}
+                            
                             />
                         </div>
                         <div>
@@ -517,6 +424,8 @@ const GeneralAssumption = () => {
                                 value={oneToFive}
                                 onChange={(ev) => setOneToFive(ev.target.value)}
                                 className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                style={{borderRadius:"13px",height:"45px"}}
+                            
                             />
                         </div>
                         <div>
@@ -534,6 +443,8 @@ const GeneralAssumption = () => {
                                 value={sixToEight}
                                 onChange={(ev) => setSixToEight(ev.target.value)}
                                 className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                style={{borderRadius:"13px",height:"45px"}}
+                            
                             />
                         </div>
                         <div>
@@ -551,9 +462,11 @@ const GeneralAssumption = () => {
                                 value={nineToTen}
                                 onChange={(ev) => setNineToTen(ev.target.value)}
                                 className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            />
+                                style={{borderRadius:"13px",height:"45px"}}
+                           
+                           />
                         </div>
-                        <div>
+                        <div >
                             <label
                                 className="block text-gray-700 text-sm font-bold mb-2"
                                 htmlFor="description"
@@ -567,7 +480,9 @@ const GeneralAssumption = () => {
                                 placeholder="Description"
                                 value={yearEleven}
                                 onChange={(ev) => setYearEleven(ev.target.value)}
-                                className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                className="appearance-none border  rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                style={{borderRadius:"13px",height:"45px"}}
+                            
                             />
                         </div>
 
@@ -580,35 +495,31 @@ const GeneralAssumption = () => {
                         style={{
                             textAlign: "end",
                             display: "flex", justifyContent: "end",
-                            position:"relative",
-                            bottom:"45px"
-                            
                         }}
                         
                     >
                         {
                             assumption !== null ?
-                                <div style={{ textAlign: "end" }}>
+                                // <div style={{ textAlign: "end" }}>
                                     <button
-                                        className="modal-close rounded-md p-2 text-white bg-green-600 hover:bg-blue-400"
+                                        className="modal-close w-full rounded-md p-2 text-white bg-green-600 hover:bg-blue-400"
 
                                         onClick={handleEditSubmit}
 
                                     >
                                         Save
                                     </button>
-                                </div>
+                                // </div>
                                 :
-                                <div style={{ textAlign: "end" }}>
+                                // <div style={{ textAlign: "end" }}>
                                     <button
                                         onClick={handleSubmit}
-                                        className="modal-close rounded-md p-2 text-white bg-green-600 hover:bg-blue-400"
-
+                                        className="modal-close w-full  rounded-md p-2 text-white bg-green-600 hover:bg-blue-400"
 
                                     >
                                         Submit
                                     </button>
-                                </div>
+                                // </div>
                         }
 
                     </div>

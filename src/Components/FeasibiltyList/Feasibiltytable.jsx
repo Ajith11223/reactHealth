@@ -72,17 +72,18 @@ const FeasibilityTable = ({ feasibilityData,projectId }) => {
                                                     ? "bg-green-500 hover:bg-green-600"
                                                     : item?.status === "Doc Prepared"
                                                         ? "bg-yellow-500 hover:bg-yellow-600"
-                                                        : "bg-red-500 hover:bg-red-600"
-                                                } text-white font-bold py-2 px-4 rounded`}
+                                                        : "bg-white-500 hover:bg-white-600 text-black"
+                                                } text-red-700   py-0 px-3 rounded`}
+                                                style={{border:"1px solid red",borderRadius:"10px"}}
                                         >
-                                            {item?.status}
+                                            {"Pending"}
                                         </button>
                                     </td>
                                     <td className="px-6 py-4 rounded-r-lg">
                                         <button className="">
                                             {/* Add your edit icon here */}
                                             <span role="img" aria-label="Edit"><strong>
-                                                <AiOutlineEllipsis /></strong>
+                                                <AiOutlineEllipsis  style={{fontSize:"47px",fontWeight:"900"}}/></strong>
                                             </span>
                                         </button>
                                     </td>

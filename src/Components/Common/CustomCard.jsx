@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Box, styled, Typography, Button } from "@mui/material";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import { BiRightIndent } from "react-icons/bi";
 
 const CustomCard = ({ img, date, item, likes, heart, share }) => {
   const ServiceBox = styled(Box)(({ theme }) => ({
@@ -21,7 +22,7 @@ const CustomCard = ({ img, date, item, likes, heart, share }) => {
         filter: "brightness(0) invert(1)", // Change image color to white on hover
       },
       "& .dots-icon": {
-        color: "white", // Change color to white on hover
+        color: "white", // Change color to white on hover 
       },
       
     },
@@ -75,11 +76,12 @@ const CustomCard = ({ img, date, item, likes, heart, share }) => {
         }}
       >
         <ImgContainer>
-          <img
+          {/* <img
             src={img}
             alt=""
-            style={{ maxWidth: "100%", color: "#36C857" }}
-          />
+            
+          /> */}
+          <BiRightIndent style={{ fontSize: "20px", color: "black" }}/>
         </ImgContainer>
         <BsThreeDotsVertical className="dots-icon" style={{ height: "20px", width: "20px" ,marginBottom:"15px",marginRight:"15px",color:"black"}} />
       </div>
