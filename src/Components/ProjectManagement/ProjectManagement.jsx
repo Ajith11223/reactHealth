@@ -16,6 +16,7 @@ const ProjectManagement = () => {
 
     // user fro  redux store
     const user = useSelector((state) => state.counter.user)
+    console.log(user)
 
     const [userProjects, setUserProjects] = useState([])
 
@@ -65,14 +66,13 @@ const ProjectManagement = () => {
                     <h5
                         className="text-[40px] font-medium font-helvetica-neue text-black-1 text-left"
                         id="exampleModalXlLabel"
-                        style={{ fontFamily: " Poppins" }}
+                        
                     >
-                        Hello, John Doe
+                        <span>Hello</span>, <span style={{ fontFamily: " Poppins" }}>{user?.username?.toUpperCase()}</span>
                     </h5>
                     {/* <br /> */}
                     <p className="text-[18px] font-helvetica-neue text-black-body text-left" style={{ fontFamily: " Poppins" }}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                        vulputate libero et velit interdum, <br /> ac aliquet odio mattis.
+                    We're thrilled to have you here. Explore, discover, and enjoy your journey on our website .
                     </p>
                 </div>
             </div>
@@ -80,7 +80,7 @@ const ProjectManagement = () => {
             {/* card area */}
            
             <ProjectModal openModal={openModal} closeModal={closeModal} />
-            <div class="container mx-auto p-8">
+            <div class="container mx-auto p-8 flex " style={{flexDirection:"column"}}>
             <div style={{ display: "flex", justifyContent: "space-between" }} className='m-5' >
                 <h4 style={{ fontFamily: "poppins", fontWeight: "550" }}
                     className="top-0 left-0  text-[#262628] text-[24px] tracking-[-0.84px] leading-[normal]"
