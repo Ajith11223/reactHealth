@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { AiOutlineEllipsis } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
+import feaseicon from '../../Images/feaseicon.png' //
+import Group from '../../Images/Group.png' //
 
 const FeasibilityTable = ({ feasibilityData,projectId }) => {
     const navigate = useNavigate();
@@ -52,7 +54,7 @@ const FeasibilityTable = ({ feasibilityData,projectId }) => {
                                     onClick={() => handleClick(item._id)}
                                 >
                                     <td className="px-6 py-4 justify-center">
-                                        <div
+                                        {/* <div
                                             style={{
                                                 width: "80px",
                                                 height: "70px",
@@ -60,8 +62,8 @@ const FeasibilityTable = ({ feasibilityData,projectId }) => {
                                                 border: "10px solid #E4E5FF",
                                             }}
                                         >
-                                            <img src={item?.image} alt="" />
-                                        </div>
+                                        </div> */}
+                                            <img style={{width:"86px",height:"70px"}} src={feaseicon} alt="" />
                                     </td>
                                     <td className="px-6 py-4">{item?.name}</td>
                                     <td className="px-6 py-4">{item?.description}</td>
@@ -82,8 +84,10 @@ const FeasibilityTable = ({ feasibilityData,projectId }) => {
                                     <td className="px-6 py-4 rounded-r-lg">
                                         <button className="">
                                             {/* Add your edit icon here */}
-                                            <span role="img" aria-label="Edit"><strong>
-                                                <AiOutlineEllipsis  style={{fontSize:"47px",fontWeight:"900"}}/></strong>
+                                            <span role="img" aria-label="Edit">
+                                                <img style={{fontSize:"47px",fontWeight:"900"}} src={Group} alt="" />
+                                                {/* <strong> */}
+                                                {/* <AiOutlineEllipsis  /></strong> */}
                                             </span>
                                         </button>
                                     </td>
