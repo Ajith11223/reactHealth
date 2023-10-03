@@ -27,73 +27,81 @@ const Revenue = () => {
   // Create an array of all column names (including the initial two)
   const allColumns = ["", ...Object.keys(additionalData)];
 
+
   return (
-    <div className="container">
-      <div
-        className="table-container"
-        style={{
-          marginTop: "20px",
-          marginRight: "50px",
-          paddingInline: "40px",
-          overflowX: "auto", // Enable horizontal scrolling
-        }}
-      >
-        <table className="min-w-full divide-y divide-gray-200 rounded-lg">
-          <thead>
-            <tr>
-              {allColumns.map((column, index) => (
-                <th
-                  key={index}
-                  className="px-6 py-4 text-left"
-                  style={{
-                    border: "10px solid rgb(243 244 246)",
-                    borderRadius: "10px",
-                    minWidth: index === 0 ? "300px" : "auto",
-                  }}
-                >
-                  {column}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody className="bg-white divide-y divide-gray-200 rounded-lg space-y-4 border-none">
-            {Object.keys(data[0]).map((key) => (
-              <tr
-                key={key}
-                style={{
-                  border: "10px solid rgb(243 244 246)",
-                  borderRadius: "10px",
-                }}
-                className="border-gray-500"
-              >
-                <td
-                  className="px-6 py-4 text-left"
-                  style={{
-                    border: "10px solid rgb(243 244 246)",
-                    borderRadius: "10px",
-                  }}
-                >
-                 <b> {key}</b>
-                </td>
-                {allColumns.slice(1).map((column, index) => (
-                  <td
+    <div>
+      <div className="container p-2">
+        <div
+          className={`table-container flex-grow`}
+          style={{
+            marginTop: "20px",
+            marginRight: "20px",
+            paddingInline: "20px",
+            overflowX: "auto",
+          }}
+        >
+          {" "}
+          <table
+            className="min-w-full divide-y divide-gray-200 "
+            id="custom-table"
+          >
+            <thead>
+              <tr>
+                {allColumns.map((column, index) => (
+                  <th
                     key={index}
-                    className="px-6 py-4 justify-center"
+                    className={`px-6  py-4 text-left ${
+                      index === 0 ? "first:rounded-l-lg" : ""
+                    } ${
+                      index === allColumns.length - 1
+                        ? "last:rounded-r-lg "
+                        : ""
+                    }`}
                     style={{
-                      border: "10px solid rgb(243 244 246)",
-                      borderRadius: "10px",
+                      color:"#90909C",
+                      fontWeight:400,
+                      minWidth: index === 0 ? "300px" : "auto",
+                      backgroundColor: "white",
+                      whiteSpace: "nowrap", // Ensure text doesn't wrap
                     }}
                   >
-                    {additionalData[column]}
-                  </td>
+                    {column}
+                  </th>
                 ))}
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody className="bg-white divide-y divide-gray-200  border-none">
+              {Object.keys(data[0]).map((key) => (
+                <tr key={key}>
+                  <td className="px-6 py-4 text-left rounded-l-lg" 
+                  style={{
+                    color:"#584949",
+                    fontWeight:500,            
+                  }}>
+                     {key}
+                  </td>
+                  {allColumns.slice(1).map((column, index) => (
+                    <td
+                      key={index}
+                      className={`px-6 py-4 justify-center ${
+                        index === allColumns.length - 1 ? "rounded-r-lg" : ""
+                      }`}
+                      style={{
+                        color:"#584949",
+                        fontWeight:400,
+                      }}
+                    >
+                      {additionalData[column]}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
-  );
+  
+    </div>  );
 };
 
 export default Revenue;

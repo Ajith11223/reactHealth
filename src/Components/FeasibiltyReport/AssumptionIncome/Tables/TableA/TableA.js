@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./TableA.css";
-import FormA from "./FormA";
+import {TbPencilMinus} from 'react-icons/tb'
 
 const TableA = () => {
   const [data] = useState([
@@ -87,16 +87,20 @@ const TableA = () => {
                   <td className="px-6 py-4 text-left rounded-l-lg" 
                   style={{
                     color:"#584949",
-                    fontWeight:500,
+                    fontWeight:500,            
                   }}>
-                    <b> {key}</b>
+                     {key}
                   </td>
-                  {allColumns.slice(1).map((column, index) => (
+                  {allColumns.slice(1).map((column,index) => (
                     <td
                       key={index}
                       className={`px-6 py-4 justify-center ${
                         index === allColumns.length - 1 ? "rounded-r-lg" : ""
                       }`}
+                      style={{
+                        color:"#584949",
+                        fontWeight:400,
+                      }}
                     >
                       {additionalData[column]}
                     </td>
@@ -109,7 +113,72 @@ const TableA = () => {
         {isFormOpen && (
           <div className="mt-2 right"
           style={{ display: isFormOpen ? "block" : "none" }}>
-              <FormA onSubmit={hideForm} />
+      <div className="flex justify-center items-center">
+        <form
+          className="border border-gray-300 p-8 rounded-lg w-80 max-w-screen-lg sm:w-96 mt-5 mb-5 bg-white h-[370px]"
+          onSubmit={hideForm}
+        >
+          <p className="text-blue-gray text-start text-2xl font-semibold"
+          style={{
+            fontWeight:700,
+            fontSize:"18px",
+
+          }}>
+            Year 1
+          </p>
+
+          <div className="mb-4">
+            <div className="flex gap-4">
+            <div className="flex flex-wrap">
+                  <div className="w-full md:w-1/2 lg:w-1/2 xl:w-1/2 pr-4">
+                    <div className="mt-10">
+                      <label
+                        className="text-[18px] font-helvetica-neue text-black-body text-left !important"
+                        style={{
+                          fontWeight:400,
+                          fontSize:"16px",
+                        }}
+                      >
+                        First
+                      </label>
+                      <input
+                        className="border border-gray-300 rounded-md px-3 py-2 w-full focus:outline-none focus:border-blue-500"
+                        type="number"
+                        id="first"
+                        placeholder=""
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full md:w-1/2 lg:w-1/2 xl:w-1/2 pl-4">
+                    <div className="mt-10">
+                      <label
+                        className="text-[18px] font-helvetica-neue text-black-body text-left !important"
+                        style={{
+                          fontWeight:400,
+                          fontSize:"16px",
+                        }}
+                      >
+                        Second
+                      </label>
+                      <input
+                        className="border border-gray-300 rounded-md px-3 py-2 w-full focus:outline-none focus:border-blue-500"
+                        type="number"
+                        id="second"
+                        placeholder=""
+                      />
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <button
+            type="submit"
+            className="w-full py-2 bg-green-500 text-white rounded-lg hover:bg-gray-100 hover:text-green-500 "
+          >
+            Submit
+          </button>
+        </form>
+      </div>
           </div>
         )}
       </div>
@@ -117,13 +186,13 @@ const TableA = () => {
       style={{ display: isFormOpen ? "none" : "block" }}>
         <button
           onClick={toggleForm}
-          className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+          className="flex items-center ml-auto px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-white hover:text-green-500"
           style={{
             marginRight: "20px",
             paddingInline: "20px",
           }}
         >
-          Edit Table
+          <TbPencilMinus className="mr-2"/> Edit Table
         </button>
       </div>
     </div>

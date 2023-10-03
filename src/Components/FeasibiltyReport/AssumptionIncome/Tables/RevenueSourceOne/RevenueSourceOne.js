@@ -24,6 +24,33 @@ import Revenue from "./Revenue(PA)/Table";
 const RevenueSourceOne = () => {
   const [open, setOpen] = React.useState(1);
 
+  const firstSvgIcon = (
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={1.5}
+    stroke="currentColor"
+    className="w-6 h-6 ml-auto"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+  </svg>
+  );
+  const secondSvgIcon = (
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={1.5}
+    stroke="currentColor"
+    className="w-6 h-6 ml-auto"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+  </svg>
+
+  );
+
+
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
   return (
@@ -39,6 +66,12 @@ const RevenueSourceOne = () => {
           }`}
         >
           Sr Con Cardiologist
+          {open === 1 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
+
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
           <SrConCardiologist />
@@ -55,6 +88,12 @@ const RevenueSourceOne = () => {
           }`}
         >
           Con Internal Medicine
+          {open === 2 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
+
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
           <ConInternalMedicine />
@@ -71,6 +110,12 @@ const RevenueSourceOne = () => {
           }`}
         >
           Con Radiology
+          {open === 3 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
+
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
           <ConRadiology />
@@ -87,6 +132,12 @@ const RevenueSourceOne = () => {
           }`}
         >
           Con Pediatrics
+          {open === 4 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
+
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
           <ConPediatrics />
@@ -102,6 +153,12 @@ const RevenueSourceOne = () => {
           }`}
         >
           Con Gynecologist
+          {open === 5 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
+
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
           <ConGynecologist />
@@ -117,6 +174,12 @@ const RevenueSourceOne = () => {
           }`}
         >
           Con Orthopedic
+          {open === 6 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
+
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
           <ConOrthopedic />
@@ -132,6 +195,12 @@ const RevenueSourceOne = () => {
           }`}
         >
           Con Urology
+          {open === 7 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
+
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
           <ConUrology />
@@ -147,6 +216,12 @@ const RevenueSourceOne = () => {
           }`}
         >
           Con Family Medicine
+          {open === 8 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
+
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
           <ConFamilyMedicine />
@@ -162,6 +237,12 @@ const RevenueSourceOne = () => {
           }`}
         >
           Con General Surgery
+          {open === 9 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
+
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
           <ConGeneralSurgery />
@@ -177,6 +258,12 @@ const RevenueSourceOne = () => {
           }`}
         >
           Con Gastroentrologist
+          {open === 10 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
+
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
           <ConGastroentrologist />
@@ -192,6 +279,12 @@ const RevenueSourceOne = () => {
           }`}
         >
           Con Dentist
+          {open === 11 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
+
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
           <ConDentist />
@@ -207,6 +300,12 @@ const RevenueSourceOne = () => {
           }`}
         >
           Dermatology (Skin)
+          {open === 12 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
+
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
           <Dermatology />
@@ -222,6 +321,12 @@ const RevenueSourceOne = () => {
           }`}
         >
           Con Opthalmology
+          {open === 13 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
+
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
           <ConOpthalmology />
@@ -237,6 +342,12 @@ const RevenueSourceOne = () => {
           }`}
         >
           Emergency Medicine (Specialist)
+          {open === 14 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
+
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
           <EmergencyMedicine />
@@ -252,6 +363,12 @@ const RevenueSourceOne = () => {
           }`}
         >
           Dietician & Nutrition Clinic
+          {open === 15 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
+
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
           <DieticianAndNutritionClinic />
@@ -268,6 +385,12 @@ const RevenueSourceOne = () => {
           }`}
         >
           Revenue (p.a)
+          {open === 16 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
+
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
           <Revenue />

@@ -68,7 +68,7 @@ const AssumptionIncome = () => {
         <Accordion open={open === 1} className="mb-2 rounded-lg px-4">
         <AccordionHeader
           onClick={() => handleOpen(1)}
-          className={`bg-white  p-5 h-[50px] rounded-lg  transition-colors ${
+          className={`bg-white flex-grow p-5 h-[50px] rounded-lg  transition-colors ${
             open === 1 ? "text-white bg-blue-700 p-5" : ""
           }`}
         >

@@ -13,6 +13,33 @@ import IncomeFromSourceNo6 from "./IncomeFromSourceNo6/Table";
 const RevenueSourceSix = () => {
   const [open, setOpen] = React.useState(1);
 
+  const firstSvgIcon = (
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={1.5}
+    stroke="currentColor"
+    className="w-6 h-6 ml-auto"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+  </svg>
+  );
+  const secondSvgIcon = (
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={1.5}
+    stroke="currentColor"
+    className="w-6 h-6 ml-auto"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+  </svg>
+
+  );
+
+
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
   return (
@@ -28,6 +55,12 @@ const RevenueSourceSix = () => {
           }`}
         >
           No. of OPDs
+          {open === 1 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
+
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
           <OPDs />
@@ -44,6 +77,12 @@ const RevenueSourceSix = () => {
           }`}
         >
           No. of Admissions
+          {open === 2 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
+
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
           <NoOfAdmissions />
@@ -60,6 +99,12 @@ const RevenueSourceSix = () => {
           }`}
         >
           Injections
+          {open === 3 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
+
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
           <Injections />
@@ -76,6 +121,12 @@ const RevenueSourceSix = () => {
           }`}
         >
           Cost of Injections
+          {open === 4 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
+
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
           <NoOfInjections />
@@ -92,6 +143,12 @@ const RevenueSourceSix = () => {
           }`}
         >
           Income from Source No.6
+          {open === 5 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
+
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
           <IncomeFromSourceNo6 />

@@ -26,5 +26,6 @@
     border-collapse: separate;
     border-spacing:0px 10px; /* Gap between rows and between thead and tbody */
   }
+  span { content: "\270F"; }
 
   
