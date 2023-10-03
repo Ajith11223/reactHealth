@@ -140,17 +140,18 @@ const GeneralAssumption = () => {
         }
     }
     return (
-        <div className="container bg-gray-100 w-full flex p-2">
-            <div>
-                <h5 className="ml-11" style={{ fontFamily: "poppins",fontWeight:"700",fontSize:"24px" }}>General Assumptions</h5>
+        <div className=" bg-gray-100 w-full flex " style={{justifyContent:"space-between"}}>
+            <div >
                 <div
                     style={{
                         marginTop: "20px",
-                        marginRight: "50px",
-                        paddingInline: "40px",
+                        marginRight: "150px",
+                        // paddingInline: "40px",
+                        textAlign:"start"
                     }}
                 >
-                    <table className="min-w-full divide-y divide-gray-200 " id="custom-table">
+                    <h5 className="" style={{ fontFamily: "poppins",fontWeight:"700",fontSize:"24px" }}>General Assumptions</h5>
+                    <table className="min-w-full divide-y divide-gray-200 " id="custom-table" style={{minWidth:"800px"}}>
                         <thead className="bg-white ">
                             <tr className="">
                                 <th className="px-6 py-3 text-left rounded-l-lg">
@@ -319,7 +320,7 @@ const GeneralAssumption = () => {
                                 type="text"
                                 id="projectName"
                                 name="projectName"
-                                className="appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                className="appearance-none border w-full py-2 px-3 text-gray-700 bg-white leading-tight focus:outline-none focus:shadow-outline"
                                 placeholder="Project Name"
                                 value={patientWithInsurance}
                                 onChange={(ev) => setPatientWithInsurence(ev.target.value)}
@@ -337,7 +338,7 @@ const GeneralAssumption = () => {
                                 type="text"
                                 id="projectName"
                                 name="projectName"
-                                className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                className="appearance-none border rounded w-full py-2 px-3 text-gray-700 bg-white leading-tight focus:outline-none focus:shadow-outline"
                                 placeholder="Project Name"
                                 value={payByCash}
                                 onChange={(ev) => setPayByCash(ev.target.value)}
@@ -347,7 +348,7 @@ const GeneralAssumption = () => {
                         </div>
                         <div>
                             <label
-                                className="block text-gray-700 text-sm font-bold mb-2"
+                                className="block text-gray-700 bg-white text-sm font-bold mb-2"
                                 htmlFor="description"
                             >
                                 Tax Rate on Taxable Profit
@@ -359,7 +360,7 @@ const GeneralAssumption = () => {
                                 placeholder="Description"
                                 value={taxProfit}
                                 onChange={(ev) => setTaxProfit(ev.target.value)}
-                                className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                className="appearance-none border bg-white rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 style={{borderRadius:"13px",height:"45px"}}
                             
                             />
@@ -378,7 +379,7 @@ const GeneralAssumption = () => {
                                 placeholder="Description"
                                 value={oneToFive}
                                 onChange={(ev) => setOneToFive(ev.target.value)}
-                                className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                className="appearance-none border bg-white rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 style={{borderRadius:"13px",height:"45px"}}
                             
                             />
@@ -397,7 +398,7 @@ const GeneralAssumption = () => {
                                 placeholder="Description"
                                 value={sixToEight}
                                 onChange={(ev) => setSixToEight(ev.target.value)}
-                                className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                className="appearance-none border bg-white rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 style={{borderRadius:"13px",height:"45px"}}
                             
                             />
@@ -416,7 +417,7 @@ const GeneralAssumption = () => {
                                 placeholder="Description"
                                 value={nineToTen}
                                 onChange={(ev) => setNineToTen(ev.target.value)}
-                                className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                className="appearance-none border bg-white rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 style={{borderRadius:"13px",height:"45px"}}
                            
                            />
@@ -435,7 +436,7 @@ const GeneralAssumption = () => {
                                 placeholder="Description"
                                 value={yearEleven}
                                 onChange={(ev) => setYearEleven(ev.target.value)}
-                                className="appearance-none border  rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                className="appearance-none border bg-white rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 style={{borderRadius:"13px",height:"45px"}}
                             
                             />

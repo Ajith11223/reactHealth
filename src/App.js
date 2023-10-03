@@ -1,47 +1,67 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import './App.css';
 import LayoutUser from './Components/Layout/LayoutUser';
 import Login from './Components/Login/Login';
-import { userRoutes } from './Routes/Routes';
+import { publicRoutes, userRoutes } from './Routes/Routes';
 import { useSelector } from 'react-redux';
 import { UserMiddleware } from './UserMiddleware/UserMiddleware';
 
 function App() {
-  const token = useSelector((state)=> state.counter)
-  console.log(token)
- 
+  const { user } = useSelector((state) => state.counter)
+  const { tokenRudex } = useSelector((state) => state.counter)
+  console.log(user)
+  const navigate = useNavigate()
   return (
     <div className="App">
-      <Routes>
-        <Route path="/login" element={<Login />} />
-      </Routes>
+
+
+
       <Routes>
         {
           userRoutes?.map((route, id) => {
             return (
-
-
               <Route path={route.path}
                 element={
-                  // <UserMiddleware>
+                  <UserMiddleware>
+                    <LayoutUser>
+                      {route.component}
+                    </LayoutUser>
+                  </UserMiddleware>
 
-                  <LayoutUser>
-                    {route.component}
-                  </LayoutUser>
-                  //  </UserMiddleware>
-                  
                 }
-                  key={id}
+                key={id}
               >
 
               </Route>
 
             )
           })
+
+
+
+        }
+
+        {
+          publicRoutes?.map((route, id) => {
+            return (
+              <Route path={route?.path}
+                element={
+                  <UserMiddleware>
+                    {route?.component}
+                  </UserMiddleware>
+                }
+                key={id}
+              >
+              </Route>
+            )
+          })
         }
 
 
       </Routes>
+
+
+
     </div>
   );
 }
