@@ -28,11 +28,5 @@
     border-collapse: separate;
     border-spacing:0px 10px; /* Gap between rows and between thead and tbody */
   }
-  .form-closed {
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
 
   

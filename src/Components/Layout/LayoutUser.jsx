@@ -262,7 +262,7 @@ const LayoutUser = ({ children }) => {
             id="header-section"
             style={{ minHeight: "80px" }}
           >
-            <nav className=" p-4 flex justify-between items-center border-b border-gray-300">
+            <nav className=" p-4 flex justify-between items-center border-b border-gray-300 bg-white">
               <img
                 src={logo}
                 alt="Iconw"
