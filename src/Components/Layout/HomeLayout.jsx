@@ -2,6 +2,7 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import NavIcon from '../../Images/NavIcon.png'
+import { Link } from 'react-router-dom'
 
 
 function classNames(...classes) {
@@ -31,12 +32,12 @@ export default function HomeLayout({children}) {
                   >
                     About Us
                   </a>
-                  <a
-                    href="#"
+                  <Link
+                    to="/user/project"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-700 hover:border-gray-300 hover:text-gray-700"
                   >
-                    Services
-                  </a>
+                    Dashboard
+                  </Link>
                   <a
                     href="#"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-700 hover:border-gray-300 hover:text-gray-700"
@@ -44,7 +45,7 @@ export default function HomeLayout({children}) {
                     Contact Us
                   </a>
                 </div>
-              </div>
+              </div> 
               <div className="hidden sm:ml-6 sm:flex sm:items-center">
 
                 {/* Profile dropdown */}
