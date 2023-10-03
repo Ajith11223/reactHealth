@@ -24,7 +24,7 @@ const publicRoutes = [
   ]
 
   const homeRoutes = [
-    { path: "/user/home", component: <Home /> },
+    { path: "/", component: <Home /> },
 
   ] 
 

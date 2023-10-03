@@ -25,11 +25,11 @@ function App() {
             return (
               <Route path={route.path}
                 element={
-                  <UserMiddleware>
+                  // <UserMiddleware>
                     <LayoutUser>
                       {route.component}
                     </LayoutUser>
-                  </UserMiddleware>
+                  // </UserMiddleware>
 
                 }
                 key={id}
@@ -49,9 +49,7 @@ function App() {
             return (
               <Route path={route?.path}
                 element={
-                  <UserMiddleware>
-                    {route?.component}
-                  </UserMiddleware>
+                  route?.component
                 }
                 key={id}
               >
@@ -59,6 +57,22 @@ function App() {
             )
           })
         }
+                {
+          homeRoutes?.map((route, id) => {
+            return (
+              <Route path={route?.path}
+                element={
+                  <HomeLayout>
+                  {route?.component}
+                  </HomeLayout>
+                }
+                key={id}
+              >
+              </Route>
+            )
+          })
+        }
+
 
 
       </Routes>

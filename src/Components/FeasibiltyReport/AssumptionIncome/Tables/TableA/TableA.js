@@ -30,25 +30,27 @@ const TableA = () => {
   const allColumns = ["", ...Object.keys(additionalData)];
 
   const [isFormOpen, setIsFormOpen] = useState(true);
+
   const toggleForm = () => {
     setIsFormOpen(!isFormOpen);
   };
+
   const hideForm = () => {
     setIsFormOpen(false);
   };
 
 
   return (
-    <div className={`container p-4 rounded-b-lg bg-gray-50 flex ${isFormOpen ? "form-open" : "form-closed"}`}>      <div
-        className={`table-container flex-grow ${isFormOpen ? "ml-0" : "ml-96"}`}
+<div className="container p-4 rounded-b-lg bg-gray-50">
+      <div
+        className={`table-container flex-grow`}
         style={{
           marginTop: "20px",
           marginRight: "50px",
           paddingInline: "40px",
-          overflowX: "auto", // Enable horizontal scrolling
+          overflowX: "auto",
         }}
-      >
-        <table
+      >        <table
           className="min-w-full divide-y divide-gray-200 "
           id="custom-table"
         >
@@ -94,19 +96,21 @@ const TableA = () => {
           </tbody>
         </table>
       </div>
- {isFormOpen ? (
-        <div className="right">
-          <FormA onSubmit={hideForm} />
-        </div>
-      ) : (
+ <div className="mt-4 text-center">
         <button
           onClick={toggleForm}
-          className="fixed top-6 right-6 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+          className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
         >
           Open Form
         </button>
+      </div>
+      {isFormOpen && (
+        <div className="right">
+          <FormA onSubmit={hideForm} />
+        </div>
       )}
-    </div>  );
+    </div>
+      );
 };
 
 export default TableA;
