@@ -26,7 +26,7 @@ const AssumptionIncome = () => {
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
  
   return (
-    <div className="w-[90%] p-4">
+    <div className="w-[100%] p-4">
       <Accordion open={open === 1} className="mb-2 rounded-lg   px-4 border-none">
         <AccordionHeader
           onClick={() => handleOpen(1)}
@@ -36,7 +36,7 @@ const AssumptionIncome = () => {
         >
           Table A
         </AccordionHeader>
-        <AccordionBody className="pt-5 text-base font-normal">
+        <AccordionBody className="pt-0 text-base font-normal">
           <TableA/>
         </AccordionBody>
       </Accordion>

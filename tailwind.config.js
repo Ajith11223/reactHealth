@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       colors:{
         primary:"#ff5733",
+        'card-green': '#36C857',
       },
       backgroundColor: {
         'custom-blue': '#5051F9',
