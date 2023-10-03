@@ -27,6 +27,11 @@ const AssumptionIncome = () => {
  
   return (
     <div className="w-[100%] p-4">
+
+      <div className="ml-3 p-3">
+        <h4 style={{fontFamily:"poppins",fontWeight:"bold",fontSize:"24px"}}>Assumptions Income</h4>
+      </div>
+
       <Accordion open={open === 1} className="mb-2 rounded-lg   px-4 border-none">
         <AccordionHeader
           onClick={() => handleOpen(1)}

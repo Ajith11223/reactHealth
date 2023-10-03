@@ -16,7 +16,7 @@ const ProjectManagement = () => {
 
     // user fro  redux store
     const user = useSelector((state) => state.counter.user)
-
+    console.log(user)
     const [userProjects, setUserProjects] = useState([])
 
     const fetchData = async () => {
@@ -24,14 +24,13 @@ const ProjectManagement = () => {
             "_id": user.id // 650be7cb7f219f8d321d527d
         }
         try {
-            if(user.id){
+            if (user.id) {
                 const { data } = await testApi.get(`/project/getPrj/${user.id}`)
                 setUserProjects(data?.getData)
-                console.log(data)
             }
-            
-        } catch (error) {
 
+        } catch (error) {
+            console.log(error)
         }
     }
 
@@ -44,10 +43,10 @@ const ProjectManagement = () => {
     // functionalty initialy fetching
     useEffect(() => {
         fetchData()
-    },[user.id])
+    }, [user.id])
 
     // navgation add
-    const handleRoute =(projectId)=>{
+    const handleRoute = (projectId) => {
         navigate(`/user/project/${projectId}`)
     }
     return (
@@ -63,59 +62,58 @@ const ProjectManagement = () => {
                         </button>
                     </div>
                     <h5
-                        className="text-[40px] font-medium font-helvetica-neue text-black-1 text-left"
+                        className="text-[32px] font-medium font-helvetica-neue text-black-1 text-left"
                         id="exampleModalXlLabel"
-                        style={{ fontFamily: " Poppins" }}
+
                     >
-                        Hello, John Doe
+                        <span>Hello</span>, <span style={{ fontFamily: " Poppins" }}>{user?.username?.toUpperCase()}</span>
                     </h5>
                     {/* <br /> */}
                     <p className="text-[18px] font-helvetica-neue text-black-body text-left" style={{ fontFamily: " Poppins" }}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                        vulputate libero et velit interdum, <br /> ac aliquet odio mattis.
+                        We're thrilled to have you here. Explore, discover, and enjoy your journey on our website .
                     </p>
                 </div>
             </div>
 
             {/* card area */}
-           
+
             <ProjectModal openModal={openModal} closeModal={closeModal} />
-            <div class="container mx-auto p-8">
-            <div style={{ display: "flex", justifyContent: "space-between" }} className='m-5' >
-                <h4 style={{ fontFamily: "poppins", fontWeight: "550" }}
-                    className="top-0 left-0  text-[#262628] text-[24px] tracking-[-0.84px] leading-[normal]"
-                >My projects</h4>
-                <div>
-                    <button
-                        style={{
-                            height: "49px",
-                            width: "100%", // Take full available width
-                            borderRadius: "13px",
-                            backgroundColor: "#36C857",
-                            fontSize: "18px",
-                            lineHeight: "21.47px",
-                            color: "white",
-                            cursor: "pointer",
-                            padding: "14px 22px"
-                        }}
-                        onClick={() => setOpenModal(true)}
-                    >Add new project</button>
+            <div class="container mx-auto  flex " style={{ flexDirection: "column", textAlign: "start" }}>
+                <div style={{ display: "flex", justifyContent: "space-between" }} className='m-5' >
+                    <h4 style={{ fontFamily: "poppins", fontWeight: "550" }}
+                        className="top-0 left-0  text-[#262628] text-[24px] tracking-[-0.84px] leading-[normal]"
+                    >My projects</h4>
+                    <div>
+                        <button
+                            style={{
+                                height: "49px",
+                                width: "100%", // Take full available width
+                                borderRadius: "13px",
+                                backgroundColor: "#36C857",
+                                fontSize: "18px",
+                                lineHeight: "21.47px",
+                                color: "white",
+                                cursor: "pointer",
+                                padding: "14px 22px"
+                            }}
+                            onClick={() => setOpenModal(true)}
+                        >Add new project</button>
+                    </div>
                 </div>
-            </div>
                 <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-5">
 
                     {
-                        userProjects?.map((HospitalServices,i)=>{
-                            return(
-                                <div onClick={()=> handleRoute(HospitalServices._id)} key={i}>
-                                
-                                <CustomCard
-                                   key={HospitalServices._id}
-                                   img={HospitalServices.img}
-                                   item={HospitalServices.name}
-                                   date={HospitalServices.location}
-                                   location={HospitalServices.location}
-                                />
+                        userProjects?.map((HospitalServices, i) => {
+                            return (
+                                <div onClick={() => handleRoute(HospitalServices._id)} key={i}>
+
+                                    <CustomCard
+                                        key={HospitalServices._id}
+                                        img={HospitalServices.img}
+                                        item={HospitalServices.name}
+                                        date={HospitalServices.location}
+                                        location={HospitalServices.location}
+                                    />
                                 </div>
                             )
                         })

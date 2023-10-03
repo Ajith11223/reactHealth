@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { testApi } from "../../API/API";
+import { useSelector } from "react-redux";
 
 function ProjectModal({ openModal, closeModal }) {
 
@@ -9,11 +10,12 @@ function ProjectModal({ openModal, closeModal }) {
   const [location, setLocation] = useState('')
   // validation state
   const [valid, setValid] = useState(false)
+  const {user} = useSelector((state)=> state.counter)
 
   // form submit 
   const handleSubmit = async () => {
     setValid(true)
-    const userId = "650be7cb7f219f8d321d527d"
+    const userId = user?.id
     const data = {
       "name": projectName,
       "location": location,

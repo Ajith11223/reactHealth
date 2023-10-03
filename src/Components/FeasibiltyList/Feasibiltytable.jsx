@@ -17,7 +17,7 @@ const FeasibilityTable = ({ feasibilityData,projectId }) => {
             style={{ marginTop: "20px", marginRight: "50px", paddingInline: "40px",minHeight:"85vh",overflowX:"scroll" }}
         >
             
-            <table className="min-w-full divide-y divide-gray-200" >
+            <table className="min-w-full divide-y divide-gray-200 " id="custom-table" >
                 <thead className="bg-white ">
                     <tr className="">
                         <th className="px-6 py-3 text-left rounded-l-lg">
@@ -38,22 +38,16 @@ const FeasibilityTable = ({ feasibilityData,projectId }) => {
                     </tr>
                 </thead>
                 {/* <br /> */}
-                <tbody className="bg-white divide-y divide-gray-200 space-y-4 rounded-lg border-none ">
+                <tbody className="bg-white divide-y divide-gray-200 space-y-4   ">
                     {feasibilityData?.map((item) => {
                         return (
                             <>
 
                                 <tr
                                     key={item?.id}
-                                    style={{
-                                        border: "15px solid rgb(243 244 246)",
-                                        borderRadius: "10px",
-                                    }}
-
-                                    className="border-gray-500"
                                     onClick={() => handleClick(item._id)}
                                 >
-                                    <td className="px-6 py-4 justify-center">
+                                    <td className="px-6 py-4 justify-center rounded-l-lg">
                                         {/* <div
                                             style={{
                                                 width: "80px",

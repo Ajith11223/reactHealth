@@ -6,8 +6,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import { GoogleLogin } from '@react-oauth/google';
 import { useDispatch } from "react-redux";
-import { setToken } from "../../Redux/Slice";
 import { googleResponse } from "../../API/API";
+import { setToken } from "../../Redux/Slice";
 
 
 // const googleResponse =async(dataCre)=>{

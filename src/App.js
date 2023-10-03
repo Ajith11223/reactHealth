@@ -1,17 +1,18 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import './App.css';
 import LayoutUser from './Components/Layout/LayoutUser';
 import Login from './Components/Login/Login';
-import { userRoutes , homeRoutes} from './Routes/Routes';
+import { publicRoutes, userRoutes , homeRoutes} from './Routes/Routes';
 import { useSelector } from 'react-redux';
 import { UserMiddleware } from './UserMiddleware/UserMiddleware';
 import HomeLayout from './Components/Layout/HomeLayout';
 import SignUP from './Components/SignUp/SignUp';
 
 function App() {
-  const token = useSelector((state)=> state.counter)
-  console.log(token)
- 
+  const { user } = useSelector((state) => state.counter)
+  const { tokenRudex } = useSelector((state) => state.counter)
+  console.log(user)
+  const navigate = useNavigate()
   return (
     <div className="App">
       <Routes>
@@ -22,45 +23,48 @@ function App() {
         {
           userRoutes?.map((route, id) => {
             return (
-
-
               <Route path={route.path}
                 element={
-                  // <UserMiddleware>
+                  <UserMiddleware>
+                    <LayoutUser>
+                      {route.component}
+                    </LayoutUser>
+                  </UserMiddleware>
 
-                  <LayoutUser>
-                    {route.component}
-                  </LayoutUser>
-                  //  </UserMiddleware>
-                  
                 }
-                  key={id}
+                key={id}
               >
 
               </Route>
 
             )
           })
-        },
+
+
+
+        }
+
         {
-          homeRoutes?.map((route, id) => {
-            return(
-              <Route path={route.path}
+          publicRoutes?.map((route, id) => {
+            return (
+              <Route path={route?.path}
                 element={
-                  <HomeLayout>
-                    {route.component}
-                  </HomeLayout>
+                  <UserMiddleware>
+                    {route?.component}
+                  </UserMiddleware>
                 }
                 key={id}
-                >
-
-                </Route>
+              >
+              </Route>
             )
           })
         }
 
 
       </Routes>
+
+
+
     </div>
   );
 }

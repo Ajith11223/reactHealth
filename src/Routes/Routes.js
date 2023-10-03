@@ -19,7 +19,7 @@ const publicRoutes = [
     { path: "/user/project", component: <ProjectManagement /> },
     { path: "/user/project/:id", component: <FeasibilityList /> },
     { path: "/user/project/:id/:fid", component: <FeasibiltyReport /> },
-    { path: "/user/project/:id/:fid/assumptionIncome", component: <AssumptionIncome/> }
+    { path: "/user/project/:id/:fid/assumptionIncome", component: <AssumptionIncome/> },
 
   ]
 
