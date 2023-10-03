@@ -19,20 +19,53 @@ import RevenueSourceTen from "./Tables/RevenueSourceTen/Table";
 import RevenueSourceEleven from "./Tables/RevenueSourceEleven/Table";
 import OtherRevenueSource1 from "./Tables/OtherRevenueSource1/Table";
 import OtherRevenueSource2 from "./Tables/OtherRevenueSource2/Table";
- 
+
 const AssumptionIncome = () => {
   const [open, setOpen] = React.useState(1);
- 
+
+  const firstSvgIcon = (
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={1.5}
+    stroke="currentColor"
+    className="w-6 h-6 ml-auto"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
+  </svg>
+  );
+  const secondSvgIcon = (
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={1.5}
+    stroke="currentColor"
+    className="w-6 h-6 ml-auto"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+  </svg>
+
+  );
+
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
- 
+
   return (
     <div className="w-[100%] p-4">
-
       <div className="ml-3 p-3">
-        <h4 style={{fontFamily:"poppins",fontWeight:"bold",fontSize:"24px"}}>Assumptions Income</h4>
+        <h4
+          style={{
+            fontFamily: "poppins",
+            fontWeight: "bold",
+            fontSize: "24px",
+          }}
+        >
+          Assumptions Income
+        </h4>
       </div>
 
-      <Accordion open={open === 1} className="mb-2 rounded-lg   px-4 border-none">
+        <Accordion open={open === 1} className="mb-2 rounded-lg px-4">
         <AccordionHeader
           onClick={() => handleOpen(1)}
           className={`bg-white  p-5 h-[50px] rounded-lg  transition-colors ${
@@ -40,9 +73,14 @@ const AssumptionIncome = () => {
           }`}
         >
           Table A
+          {open === 1 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
-          <TableA/>
+          <TableA />
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 2} className="mb-2 rounded-lg px-4">
@@ -53,9 +91,14 @@ const AssumptionIncome = () => {
           }`}
         >
           Table B
+          {open === 2 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
-            <TableB/>
+          <TableB />
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 3} className="rounded-lg px-4 mb-2">
@@ -66,9 +109,14 @@ const AssumptionIncome = () => {
           }`}
         >
           Revenue Source No. 1 (Out-Patient Department / Consultation Fees)
+          {open === 3 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
-          <RevenueSourceOne/>
+          <RevenueSourceOne />
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 4} className="mb-2 rounded-lg px-4">
@@ -79,9 +127,14 @@ const AssumptionIncome = () => {
           }`}
         >
           Revenue Source No. 2 (OPD Procedures- Dental and Dermatology)
+          {open === 4 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
-            <RevenueSourceTwo/>
+          <RevenueSourceTwo />
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 5} className="mb-2 rounded-lg px-4">
@@ -92,9 +145,14 @@ const AssumptionIncome = () => {
           }`}
         >
           Revenue Source No. 3 (Diagnostic & Imaging)
+          {open === 5 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
-            <RevenueSourceThree/>
+          <RevenueSourceThree />
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 6} className="mb-2 rounded-lg px-4">
@@ -105,9 +163,14 @@ const AssumptionIncome = () => {
           }`}
         >
           Revenue Source No. 4 (Admissions)
+          {open === 6 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
-            <RevenueSourceFour/>
+          <RevenueSourceFour />
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 7} className="mb-2 rounded-lg px-4">
@@ -118,9 +181,14 @@ const AssumptionIncome = () => {
           }`}
         >
           Revenue Source No. 5 (Rehabilitation)
+          {open === 7 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
-            <RevenueSourceFive/>
+          <RevenueSourceFive />
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 8} className="mb-2 rounded-lg px-4">
@@ -131,9 +199,14 @@ const AssumptionIncome = () => {
           }`}
         >
           Revenue Source No. 6 (Pharmacy)
+          {open === 8 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
-            <RevenueSourceSix/>
+          <RevenueSourceSix />
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 9} className="mb-2 rounded-lg px-4">
@@ -144,9 +217,14 @@ const AssumptionIncome = () => {
           }`}
         >
           Revenue Source No. 7 (Cafetaria)
+          {open === 9 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
-            <RevenueSourceSeven/>
+          <RevenueSourceSeven />
         </AccordionBody>
       </Accordion>
 
@@ -158,9 +236,14 @@ const AssumptionIncome = () => {
           }`}
         >
           Revenue Source No. 8 (OT Procedures)
+          {open === 10 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
-            <RevenueSourceEight/>
+          <RevenueSourceEight />
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 11} className="mb-2 rounded-lg px-4">
@@ -171,9 +254,14 @@ const AssumptionIncome = () => {
           }`}
         >
           Revenue Source No. 9 (Labor Deliveries)
+          {open === 11 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
-            <RevenueSourceNine/>
+          <RevenueSourceNine />
         </AccordionBody>
       </Accordion>
 
@@ -185,9 +273,14 @@ const AssumptionIncome = () => {
           }`}
         >
           Revenue Source No. 10 (HIV Center)
+          {open === 12 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
-            <RevenueSourceTen/>
+          <RevenueSourceTen />
         </AccordionBody>
       </Accordion>
 
@@ -199,9 +292,14 @@ const AssumptionIncome = () => {
           }`}
         >
           Revenue Source No. 11 (Accommodation)
+          {open === 13 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
-            <RevenueSourceEleven/>
+          <RevenueSourceEleven />
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 14} className="mb-2 rounded-lg px-4">
@@ -212,29 +310,35 @@ const AssumptionIncome = () => {
           }`}
         >
           Other Revenue Source 1
+          {open === 14 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
-            <OtherRevenueSource1/>
+          <OtherRevenueSource1 />
         </AccordionBody>
-      </Accordion><Accordion open={open === 15} className="mb-2 rounded-lg px-4">
+      </Accordion>
+      <Accordion open={open === 15} className="mb-2 rounded-lg px-4">
         <AccordionHeader
           onClick={() => handleOpen(15)}
           className={`bg-white  p-5 h-[50px] rounded-lg  transition-colors ${
-            open === 16 ? "text-white bg-blue-700 p-5" : ""
+            open === 15 ? "text-white bg-blue-700 p-5" : ""
           }`}
         >
           Other Revenue Source 2
+          {open === 15 ? (
+            firstSvgIcon
+          ) : (
+            secondSvgIcon
+          )}
         </AccordionHeader>
         <AccordionBody className="pt-0 text-base font-normal">
-            <OtherRevenueSource2/>
+          <OtherRevenueSource2 />
         </AccordionBody>
       </Accordion>
-
-
-
-
-
     </div>
   );
-}
+};
 export default AssumptionIncome;

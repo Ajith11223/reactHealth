@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const FormA = ({onSubmit}) => {
+const FormA = ({ onSubmit }) => {
   // Define a state variable to control the visibility of the div
   const [isDivOpen, setIsDivOpen] = useState(true);
 
@@ -11,42 +11,55 @@ const FormA = ({onSubmit}) => {
 
     // Close the div by setting isDivOpen to false
     onSubmit();
-    };
+  };
 
   return (
     // Conditionally render the div based on the value of isDivOpen
     isDivOpen && (
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center ">
         <form
-          className="border border-gray-300 p-8 rounded-lg w-80 max-w-screen-lg sm:w-96 mt-5 mb-5"
+          className="border border-gray-300 p-8 rounded-lg w-80 max-w-screen-lg sm:w-96 mt-5 mb-5 bg-white"
           onSubmit={handleSubmit}
         >
-          <h4 className="text-blue-gray text-center mb-6 text-2xl font-semibold">
+          <h4 className="text-blue-gray text-start text-2xl font-semibold">
             Form A
           </h4>
 
           <div className="mb-4">
-            <div className="space-y-6">
-              <div className="flex gap-2">
-                <label htmlFor="first" className="w-1/3 mt-2">
-                  First
-                </label>
-                <input
-                  type="text"
-                  id="first"
-                  className="w-2/3 p-2 border border-gray-300 rounded-lg"
-                />
-              </div>
-              <div className="flex gap-2">
-                <label htmlFor="second" className="w-1/3 mt-2">
-                  Second
-                </label>
-                <input
-                  type="text"
-                  id="second"
-                  className="w-2/3 p-2 border border-gray-300 rounded-lg"
-                />
-              </div>
+            <div className="flex gap-4">
+            <div className="flex flex-wrap">
+                  <div className="w-full md:w-1/2 lg:w-1/2 xl:w-1/2 pr-4">
+                    <div className="mt-10">
+                      <label
+                        className="text-[18px] font-helvetica-neue text-black-body text-left !important"
+                        htmlFor="email"
+                      >
+                        First
+                      </label>
+                      <input
+                        className="border border-gray-300 rounded-md px-3 py-2 w-full focus:outline-none focus:border-blue-500"
+                        type="number"
+                        id="first"
+                        placeholder=""
+                      />
+                    </div>
+                  </div>
+                  <div className="w-full md:w-1/2 lg:w-1/2 xl:w-1/2 pl-4">
+                    <div className="mt-10">
+                      <label
+                        className="text-[18px] font-helvetica-neue text-black-body text-left !important"
+                      >
+                        Second
+                      </label>
+                      <input
+                        className="border border-gray-300 rounded-md px-3 py-2 w-full focus:outline-none focus:border-blue-500"
+                        type="number"
+                        id="second"
+                        placeholder=""
+                      />
+                    </div>
+                  </div>
+                </div>
             </div>
           </div>
           <button
