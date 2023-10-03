@@ -53,7 +53,7 @@ function Google() {
 const Login = () => {
     return (
         <div className="min-h-screen flex justify-center items-center">
-            <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2">
                 <div
                     className="bg-custom-blue p-4 m-5 items-center relative overflow-hidden"
                     style={{ borderRadius: "2rem" }}

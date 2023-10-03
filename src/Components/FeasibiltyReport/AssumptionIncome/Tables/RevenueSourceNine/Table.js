@@ -34,7 +34,7 @@ const RevenueSourceNine = () => {
   const allColumns = ["", ...Object.keys(additionalData)];
 
   return (
-    <div className="container">
+    <div className="container p-4 rounded-b-lg bg-gray-50">
       <div
         className="table-container"
         style={{

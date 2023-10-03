@@ -41,7 +41,7 @@ const AssumptionIncome = () => {
         >
           Table A
         </AccordionHeader>
-        <AccordionBody className="pt-5 text-base font-normal">
+        <AccordionBody className="pt-0 text-base font-normal">
           <TableA/>
         </AccordionBody>
       </Accordion>
