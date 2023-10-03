@@ -2,7 +2,7 @@ import {
   SidebarComponent,
   TreeViewComponent,
 } from "@syncfusion/ej2-react-navigations";
-import React from "react";
+import React, { useEffect } from "react";
 import SidebarData from "../SideBar/SideBarData";
 import { BiChevronLeft } from "react-icons/bi";
 import NavIcon from "../../Images/NavIcon.png";
@@ -11,8 +11,16 @@ import { Menu } from "@mui/base/Menu";
 import { MenuButton } from "@mui/base/MenuButton";
 import { MenuItem, menuItemClasses } from "@mui/base/MenuItem";
 import { styled } from "@mui/system";
+import logo from '../../Images/logo.png'
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { setToken, setUser } from "../../Redux/Slice";
 
 const LayoutUser = ({ children }) => {
+  const navigate=useNavigate()
+  const dispatch =useDispatch()
+  const user =useSelector((state)=> state.counter.user)
+  console.log(user)
   let sidebarobj;
   let treeviewobj;
   let data = [
@@ -93,7 +101,10 @@ const LayoutUser = ({ children }) => {
     iconCss: "iconCss",
   };
   function onCreate() {
-    sidebarobj.element.style.visibility = "";
+    if(sidebarobj){
+
+      sidebarobj.element.style.visibility = "";
+    }
   }
   function onClose() {
     treeviewobj?.collapseAll();
@@ -107,6 +118,10 @@ const LayoutUser = ({ children }) => {
       treeviewobj?.expandAll();
     }
   }
+
+  useEffect(()=>{
+    toggleClick()
+  },[])
   let sidbarToggle = null;
   const createHandleMenuClick = (menuItem) => {
     return () => {
@@ -222,6 +237,15 @@ const LayoutUser = ({ children }) => {
     }
     `
   );
+
+  const handleLogout =()=>{
+    localStorage.clear("auth")
+    dispatch(setUser({}))
+    dispatch(setToken(""))
+    navigate('/login')
+    
+    // window.location.reload();
+  }
   return (
     // Sidebar Element Declaration
     <div className="control-section">
@@ -238,19 +262,19 @@ const LayoutUser = ({ children }) => {
             id="header-section"
             style={{ minHeight: "80px" }}
           >
-            <nav className=" p-5 flex justify-between items-center border-b border-gray-300">
+            <nav className=" p-4 flex justify-between items-center border-b border-gray-300">
               <img
-                src={<NavIcon />}
-                alt="Icon"
+                src={logo}
+                alt="Iconw"
                 width={210}
                 height={36.13}
                 className=""
               />
               <div className="flex items-center space-x-2">
                 <Dropdown>
-                  <TriggerButton className="flex items-center">
+                  <TriggerButton className="flex items-center gap-3">
                     
-                    <span className="text-lg font-bold">name</span>
+                    <span className="text-md " style={{fontFamily:"poppins"}}>{user?.username}</span>
                     <img
                       src={
                         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmR1VLcPa0aFfNClulnJQOD2GR9Nxw-3AEFvSg9ss&s"
@@ -268,7 +292,7 @@ const LayoutUser = ({ children }) => {
                     >
                       Language settings
                     </StyledMenuItem>
-                    <StyledMenuItem onClick={createHandleMenuClick("Log out")}>
+                    <StyledMenuItem onClick={handleLogout}>
                       Log out
                     </StyledMenuItem>
                   </Menu>

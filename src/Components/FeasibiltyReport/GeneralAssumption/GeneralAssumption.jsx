@@ -320,7 +320,7 @@ const GeneralAssumption = () => {
                                 type="text"
                                 id="projectName"
                                 name="projectName"
-                                className="appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                className="appearance-none border w-full py-2 px-3 text-gray-700 bg-white leading-tight focus:outline-none focus:shadow-outline"
                                 placeholder="Project Name"
                                 value={patientWithInsurance}
                                 onChange={(ev) => setPatientWithInsurence(ev.target.value)}
@@ -338,7 +338,7 @@ const GeneralAssumption = () => {
                                 type="text"
                                 id="projectName"
                                 name="projectName"
-                                className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                className="appearance-none border rounded w-full py-2 px-3 text-gray-700 bg-white leading-tight focus:outline-none focus:shadow-outline"
                                 placeholder="Project Name"
                                 value={payByCash}
                                 onChange={(ev) => setPayByCash(ev.target.value)}
@@ -348,7 +348,7 @@ const GeneralAssumption = () => {
                         </div>
                         <div>
                             <label
-                                className="block text-gray-700 text-sm font-bold mb-2"
+                                className="block text-gray-700 bg-white text-sm font-bold mb-2"
                                 htmlFor="description"
                             >
                                 Tax Rate on Taxable Profit
@@ -360,7 +360,7 @@ const GeneralAssumption = () => {
                                 placeholder="Description"
                                 value={taxProfit}
                                 onChange={(ev) => setTaxProfit(ev.target.value)}
-                                className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                className="appearance-none border bg-white rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 style={{borderRadius:"13px",height:"45px"}}
                             
                             />
@@ -379,7 +379,7 @@ const GeneralAssumption = () => {
                                 placeholder="Description"
                                 value={oneToFive}
                                 onChange={(ev) => setOneToFive(ev.target.value)}
-                                className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                className="appearance-none border bg-white rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 style={{borderRadius:"13px",height:"45px"}}
                             
                             />
@@ -398,7 +398,7 @@ const GeneralAssumption = () => {
                                 placeholder="Description"
                                 value={sixToEight}
                                 onChange={(ev) => setSixToEight(ev.target.value)}
-                                className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                className="appearance-none border bg-white rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 style={{borderRadius:"13px",height:"45px"}}
                             
                             />
@@ -417,7 +417,7 @@ const GeneralAssumption = () => {
                                 placeholder="Description"
                                 value={nineToTen}
                                 onChange={(ev) => setNineToTen(ev.target.value)}
-                                className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                className="appearance-none border bg-white rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 style={{borderRadius:"13px",height:"45px"}}
                            
                            />
@@ -436,7 +436,7 @@ const GeneralAssumption = () => {
                                 placeholder="Description"
                                 value={yearEleven}
                                 onChange={(ev) => setYearEleven(ev.target.value)}
-                                className="appearance-none border  rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                className="appearance-none border bg-white rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 style={{borderRadius:"13px",height:"45px"}}
                             
                             />
