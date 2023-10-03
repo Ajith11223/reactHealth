@@ -5,12 +5,10 @@
   
   .left {
     flex: 0 0 60%; /* 60% width */
-    background-color: #f0f0f0; /* Add styling as needed */
   }
   
   .right {
     flex: 0 0 30%; /* 40% width */
-    background-color: #ffffff; /* Add styling as needed */
   }
   
   /* Add media queries for responsiveness */

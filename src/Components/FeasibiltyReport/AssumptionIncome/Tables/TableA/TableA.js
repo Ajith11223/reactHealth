@@ -39,78 +39,95 @@ const TableA = () => {
     setIsFormOpen(false);
   };
 
-
   return (
-<div className="container p-4 rounded-b-lg bg-gray-50">
-      <div
-        className={`table-container flex-grow`}
-        style={{
-          marginTop: "20px",
-          marginRight: "50px",
-          paddingInline: "40px",
-          overflowX: "auto",
-        }}
-      >        <table
-          className="min-w-full divide-y divide-gray-200 "
-          id="custom-table"
+    <div>
+      <div className="container p-2">
+        <div
+          className={`table-container flex-grow`}
+          style={{
+            marginTop: "20px",
+            marginRight: "20px",
+            paddingInline: "20px",
+            overflowX: "auto",
+          }}
         >
-          <thead>
-            <tr>
-              {allColumns.map((column, index) => (
-                <th
-                  key={index}
-                  className={`px-6  py-4 text-left ${
-                    index === 0 ? "first:rounded-l-lg" : ""
-                  } ${
-                    index === allColumns.length - 1 ? "last:rounded-r-lg " : ""
-                  }`}
-                  style={{
-                    minWidth: index === 0 ? "300px" : "auto",
-                    backgroundColor: "white",
-                    whiteSpace: "nowrap", // Ensure text doesn't wrap
-                  }}
-                >
-                  {column}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody className="bg-white divide-y divide-gray-200  border-none">
-            {Object.keys(data[0]).map((key) => (
-              <tr key={key}>
-                <td className="px-6 py-4 text-left rounded-l-lg">
-                  <b> {key}</b>
-                </td>
-                {allColumns.slice(1).map((column, index) => (
-                  <td
+          {" "}
+          <table
+            className="min-w-full divide-y divide-gray-200 "
+            id="custom-table"
+          >
+            <thead>
+              <tr>
+                {allColumns.map((column, index) => (
+                  <th
                     key={index}
-                    className={`px-6 py-4 justify-center ${
-                      index === allColumns.length - 1 ? "rounded-r-lg" : ""
+                    className={`px-6  py-4 text-left ${
+                      index === 0 ? "first:rounded-l-lg" : ""
+                    } ${
+                      index === allColumns.length - 1
+                        ? "last:rounded-r-lg "
+                        : ""
                     }`}
+                    style={{
+                      color:"#90909C",
+                      fontWeight:400,
+                      minWidth: index === 0 ? "300px" : "auto",
+                      backgroundColor: "white",
+                      whiteSpace: "nowrap", // Ensure text doesn't wrap
+                    }}
                   >
-                    {additionalData[column]}
-                  </td>
+                    {column}
+                  </th>
                 ))}
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody className="bg-white divide-y divide-gray-200  border-none">
+              {Object.keys(data[0]).map((key) => (
+                <tr key={key}>
+                  <td className="px-6 py-4 text-left rounded-l-lg" 
+                  style={{
+                    color:"#584949",
+                    fontWeight:500,
+                  }}>
+                    <b> {key}</b>
+                  </td>
+                  {allColumns.slice(1).map((column, index) => (
+                    <td
+                      key={index}
+                      className={`px-6 py-4 justify-center ${
+                        index === allColumns.length - 1 ? "rounded-r-lg" : ""
+                      }`}
+                    >
+                      {additionalData[column]}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        {isFormOpen && (
+          <div className="mt-2 right"
+          style={{ display: isFormOpen ? "block" : "none" }}>
+              <FormA onSubmit={hideForm} />
+          </div>
+        )}
       </div>
- <div className="mt-4 text-center">
+      <div className=" mt-4 p-2 text-end"
+      style={{ display: isFormOpen ? "none" : "block" }}>
         <button
           onClick={toggleForm}
           className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+          style={{
+            marginRight: "20px",
+            paddingInline: "20px",
+          }}
         >
-          Open Form
+          Edit Table
         </button>
       </div>
-      {isFormOpen && (
-        <div className="right">
-          <FormA onSubmit={hideForm} />
-        </div>
-      )}
     </div>
-      );
+  );
 };
 
 export default TableA;
