@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./TableA.css";
-import FormA from "./FormA";
+import { TbPencilMinus } from "react-icons/tb";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
@@ -230,7 +230,7 @@ const TableA = () => {
         >
           {" "}
           <table
-            className="min-w-full divide-y divide-gray-200 "
+            className="min-w-full divide-y divide-gray-200"
             id="custom-table"
           >
             <thead>
@@ -238,17 +238,21 @@ const TableA = () => {
                 {allColumns.map((column, index) => (
                   <th
                     key={index}
-                    className={`px-6  py-4 text-left ${index === 0 ? "first:rounded-l-lg" : ""
-                      } ${index === allColumns.length - 1
-                        ? "last:rounded-r-lg "
+                    className={`px-6 py-4 text-left ${
+                      index === 0 ? "rounded-l-2xl" : ""
+                    } ${
+                      index === allColumns.length - 1
+                        ? "last:rounded-r-2xl"
                         : ""
                       }`}
                     style={{
                       color: "#90909C",
                       fontWeight: 400,
+                      color: "#90909C",
+                      fontWeight: 400,
                       minWidth: index === 0 ? "300px" : "auto",
                       backgroundColor: "white",
-                      whiteSpace: "nowrap", // Ensure text doesn't wrap
+                      whiteSpace: "nowrap",
                     }}
                   >
                     {column}
@@ -869,13 +873,14 @@ const TableA = () => {
         style={{ display: isFormOpen ? "none" : "block" }}>
         <button
           onClick={toggleForm}
-          className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+          className="flex items-center ml-auto px-4 py-2 bg-green-500 text-white hover:bg-white hover:text-green-500"
           style={{
             marginRight: "20px",
             paddingInline: "20px",
+            borderRadius: "13px",
           }}
         >
-          Edit Table
+          <TbPencilMinus className="mr-2" /> Edit Table
         </button>
       </div>
     </div>
