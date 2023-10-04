@@ -43,7 +43,7 @@ const RevenueSourceSix = () => {
   const handleOpen = (value) => setOpen(open === value ? 0 : value);
 
   return (
-    <div className=" p-4 rounded-b-lg bg-gray-50">
+    <div className=" p-4">
       <Accordion
         open={open === 1}
         className="mb-2 rounded-lg px-4 "

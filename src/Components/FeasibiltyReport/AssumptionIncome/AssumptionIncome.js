@@ -108,7 +108,7 @@ const AssumptionIncome = () => {
             open === 3 ? "text-white bg-blue-700 p-5" : ""
           }`}
         >
-          Revenue Source No. 1 (Out-Patient Department / Consultation Fees)
+          Revenue Source No. 1 <span className="hidden lg:inline-block"> (Out-Patient Department / Consultation Fees)</span>
           {open === 3 ? (
             firstSvgIcon
           ) : (
