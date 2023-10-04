@@ -12,3 +12,20 @@ body{
   font-family: 'Helvetica Neue', sans-serif;
 
 }
+/* For Chrome, Safari, and newer versions of Opera */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* For Internet Explorer */
+input[type="number"]::-ms-clear {
+  display: none;
+}
+

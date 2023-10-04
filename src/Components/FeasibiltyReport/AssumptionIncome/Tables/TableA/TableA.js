@@ -248,8 +248,6 @@ const TableA = () => {
                     style={{
                       color: "#90909C",
                       fontWeight: 400,
-                      color: "#90909C",
-                      fontWeight: 400,
                       minWidth: index === 0 ? "300px" : "auto",
                       backgroundColor: "white",
                       whiteSpace: "nowrap",
