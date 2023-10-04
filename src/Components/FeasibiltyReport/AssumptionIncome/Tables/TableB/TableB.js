@@ -163,6 +163,7 @@ const TableB = () => {
                           />
                         </div>
                       </div>
+                      
                       <div className="w-full md:w-1/2 lg:w-1/2 xl:w-1/2 pl-4">
                         <div className="mt-10">
                           <label
