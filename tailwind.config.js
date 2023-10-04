@@ -9,6 +9,7 @@ module.exports = {
   theme: {
     extend: {
       colors:{
+        'custom-gray': '#584949',
         primary:"#ff5733",
         'card-green': '#36C857',
       },
