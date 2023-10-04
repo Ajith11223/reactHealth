@@ -179,7 +179,6 @@ const TableA = () => {
     }
     try {
       const updateData = await axios.patch(`http://localhost:5000/api/incomeA/${data?._id}`, dataObj)
-      console.log(updateData)
       if (updateData) {
         fetchdata()
         hideForm()
@@ -271,75 +270,75 @@ const TableA = () => {
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
-                    }`}
+                    }`} 
                 >
-                  {data?.TargetNoOfPatientsPerDayPerConsultantOPD?.year1}
+                  {data?.TargetNoOfPatientsPerDayPerConsultantOPD ? data?.TargetNoOfPatientsPerDayPerConsultantOPD?.year1:"0"}
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {data?.TargetNoOfPatientsPerDayPerConsultantOPD?.year2}
+                  {data?.TargetNoOfPatientsPerDayPerConsultantOPD ? data?.TargetNoOfPatientsPerDayPerConsultantOPD?.year2 :"0"}
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {data?.TargetNoOfPatientsPerDayPerConsultantOPD?.year3}
+                  {data?.TargetNoOfPatientsPerDayPerConsultantOPD ? data?.TargetNoOfPatientsPerDayPerConsultantOPD?.year3 :"0"}
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {data?.TargetNoOfPatientsPerDayPerConsultantOPD?.year4}
+                  {data?.TargetNoOfPatientsPerDayPerConsultantOPD ? data?.TargetNoOfPatientsPerDayPerConsultantOPD?.year4 : "0"}
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {data?.TargetNoOfPatientsPerDayPerConsultantOPD?.year5}
+                  {data?.TargetNoOfPatientsPerDayPerConsultantOPD ? data?.TargetNoOfPatientsPerDayPerConsultantOPD?.year5 :"0"}
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {data?.TargetNoOfPatientsPerDayPerConsultantOPD?.year6}
+                  {data?.TargetNoOfPatientsPerDayPerConsultantOPD ? data?.TargetNoOfPatientsPerDayPerConsultantOPD?.year6:"0"}
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {data?.TargetNoOfPatientsPerDayPerConsultantOPD?.year7}
+                  {data?.TargetNoOfPatientsPerDayPerConsultantOPD ? data?.TargetNoOfPatientsPerDayPerConsultantOPD?.year7:"0"}
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {data?.TargetNoOfPatientsPerDayPerConsultantOPD?.year8}
+                  {data?.TargetNoOfPatientsPerDayPerConsultantOPD ? data?.TargetNoOfPatientsPerDayPerConsultantOPD?.year8 :"0"}
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {data?.TargetNoOfPatientsPerDayPerConsultantOPD?.year9}
+                  {data?.TargetNoOfPatientsPerDayPerConsultantOPD ?data?.TargetNoOfPatientsPerDayPerConsultantOPD?.year9:"0"}
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {data?.TargetNoOfPatientsPerDayPerConsultantOPD?.year10}
+                  {data?.TargetNoOfPatientsPerDayPerConsultantOPD ? data?.TargetNoOfPatientsPerDayPerConsultantOPD?.year10:"0"}
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {data?.TargetNoOfPatientsPerDayPerConsultantOPD?.year11}
+                  {data?.TargetNoOfPatientsPerDayPerConsultantOPD ? data?.TargetNoOfPatientsPerDayPerConsultantOPD?.year11 : "0"}
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {data?.TargetNoOfPatientsPerDayPerConsultantOPD?.year12}
+                  {data?.TargetNoOfPatientsPerDayPerConsultantOPD ? data?.TargetNoOfPatientsPerDayPerConsultantOPD?.year12 : "0"}
                 </td>
               </tr>
 
@@ -355,74 +354,74 @@ const TableA = () => {
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {data?.YOYGrowthInAchievementRate?.year1} %
+                  {data?.YOYGrowthInAchievementRate ? data?.YOYGrowthInAchievementRate?.year1 : "0"} %
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {data?.YOYGrowthInAchievementRate?.year2} %
+                  {data?.YOYGrowthInAchievementRate ? data?.YOYGrowthInAchievementRate?.year2 :"0"} %
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {data?.YOYGrowthInAchievementRate?.year3} %
+                  {data?.YOYGrowthInAchievementRate ? data?.YOYGrowthInAchievementRate?.year3:"0"} %
                 </td>
 
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {data?.YOYGrowthInAchievementRate?.year4} %
+                  {data?.YOYGrowthInAchievementRate ? data?.YOYGrowthInAchievementRate?.year4 :"0"} %
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {data?.YOYGrowthInAchievementRate?.year5} %
+                  {data?.YOYGrowthInAchievementRate ? data?.YOYGrowthInAchievementRate?.year5 :"0"} %
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {data?.YOYGrowthInAchievementRate?.year6} %
+                  {data?.YOYGrowthInAchievementRate ? data?.YOYGrowthInAchievementRate?.year6 : "0"} %
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {data?.YOYGrowthInAchievementRate?.year7} %
+                  {data?.YOYGrowthInAchievementRate ? data?.YOYGrowthInAchievementRate?.year7 :"0"} %
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {data?.YOYGrowthInAchievementRate?.year8} %
+                  {data?.YOYGrowthInAchievementRate ? data?.YOYGrowthInAchievementRate?.year8 :"0"} %
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {data?.YOYGrowthInAchievementRate?.year9} %
+                  {data?.YOYGrowthInAchievementRate ? data?.YOYGrowthInAchievementRate?.year9 :"0"} %
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {data?.YOYGrowthInAchievementRate?.year10} %
+                  {data?.YOYGrowthInAchievementRate ? data?.YOYGrowthInAchievementRate?.year10 :"0"} %
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {data?.YOYGrowthInAchievementRate?.year11} %
+                  {data?.YOYGrowthInAchievementRate ? data?.YOYGrowthInAchievementRate?.year11 :"0"} %
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {data?.YOYGrowthInAchievementRate?.year12} %
+                  {data?.YOYGrowthInAchievementRate ? data?.YOYGrowthInAchievementRate?.year12 :"0"} %
                 </td>
               </tr>
 
@@ -439,74 +438,74 @@ const TableA = () => {
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {achievment?.year1 >= 95 ? 95 : achievment?.year1} %
+                  {data?.Achievement ? achievment?.year1 >= 95 ? 95 : achievment?.year1 :"0"} %
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {achievment?.year2 >= 95 ? 95 : achievment?.year2} %
+                  {data?.Achievement ? achievment?.year2 >= 95 ? 95 : achievment?.year2 :"0"} %
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {achievment?.year3 >= 95 ? 95 : achievment?.year3} %
+                  {data?.Achievement ? achievment?.year3 >= 95 ? 95 : achievment?.year3 :"0"} %
                 </td>
 
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {achievment?.year4 >= 95 ? 95 : achievment?.year4} %
+                  {data?.Achievement ? achievment?.year4 >= 95 ? 95 : achievment?.year4:"0"} %
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {achievment?.year5 >= 95 ? 95 : achievment?.year5} %
+                  {data?.Achievement ? achievment?.year5 >= 95 ? 95 : achievment?.year5 :"0"} %
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {achievment?.year6 >= 95 ? 95 : achievment?.year6} %
+                  {data?.Achievement ? achievment?.year6 >= 95 ? 95 : achievment?.year6 :"0"} %
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {achievment?.year7 >= 95 ? 95 : achievment?.year7} %
+                  {data?.Achievement ? achievment?.year7 >= 95 ? 95 : achievment?.year7 :"0"} %
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {achievment?.year8 >= 95 ? 95 : achievment?.year8} %
+                  {data?.Achievement ? achievment?.year8 >= 95 ? 95 : achievment?.year8 :"0"} %
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {achievment?.year9 >= 95 ? 95 : achievment?.year9} %
+                  {data?.Achievement ? achievment?.year9 >= 95 ? 95 : achievment?.year9 :"0"} %
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {achievment?.year10 >= 95 ? 95 : achievment?.year10} %
+                  {data?.Achievement ? achievment?.year10 >= 95 ? 95 : achievment?.year10 :"0"} %
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {achievment?.year11 >= 95 ? 95 : achievment?.year11} %
+                  {data?.Achievement ? achievment?.year11 >= 95 ? 95 : achievment?.year11:"0"} %
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {achievment?.year12 >= 95 ? 95 : achievment?.year12} %
+                  {data?.Achievement ? achievment?.year12 >= 95 ? 95 : achievment?.year12 :"0"} %
                 </td>
               </tr>
 
@@ -524,74 +523,74 @@ const TableA = () => {
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {NumberOfPatientsPerDayPerConsultant?.year1}
+                  {data?.NumberOfPatientsPerDayPerConsultant ? NumberOfPatientsPerDayPerConsultant?.year1 :"0"} 
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {NumberOfPatientsPerDayPerConsultant?.year2}
+                  {data?.NumberOfPatientsPerDayPerConsultant ? NumberOfPatientsPerDayPerConsultant?.year2 :"0"}
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {NumberOfPatientsPerDayPerConsultant?.year3}
+                  {data?.NumberOfPatientsPerDayPerConsultant ? NumberOfPatientsPerDayPerConsultant?.year3 : "0"}
                 </td>
 
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {NumberOfPatientsPerDayPerConsultant?.year4}
+                  {data?.NumberOfPatientsPerDayPerConsultant ? NumberOfPatientsPerDayPerConsultant?.year4 :"0"}
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {NumberOfPatientsPerDayPerConsultant?.year5}
+                  {data?.NumberOfPatientsPerDayPerConsultant ? NumberOfPatientsPerDayPerConsultant?.year5 :"0"}
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {NumberOfPatientsPerDayPerConsultant?.year6}
+                  {data?.NumberOfPatientsPerDayPerConsultant ? NumberOfPatientsPerDayPerConsultant?.year6 :"0"}
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {NumberOfPatientsPerDayPerConsultant?.year7}
+                  {data?.NumberOfPatientsPerDayPerConsultant ? NumberOfPatientsPerDayPerConsultant?.year7 :"0"}
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {NumberOfPatientsPerDayPerConsultant?.year8}
+                  {data?.NumberOfPatientsPerDayPerConsultant ? NumberOfPatientsPerDayPerConsultant?.year8 :"0"}
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {NumberOfPatientsPerDayPerConsultant?.year9}
+                  {data?.NumberOfPatientsPerDayPerConsultant ? NumberOfPatientsPerDayPerConsultant?.year9 :"0"}
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {NumberOfPatientsPerDayPerConsultant?.year10}
+                  {data?.NumberOfPatientsPerDayPerConsultant ? NumberOfPatientsPerDayPerConsultant?.year10 :"0"}
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {NumberOfPatientsPerDayPerConsultant?.year11}
+                  {data?.NumberOfPatientsPerDayPerConsultant ? NumberOfPatientsPerDayPerConsultant?.year11 :"0"}
                 </td>
                 <td
                   className={`px-6 py-4 justify-center ${1 === allColumns.length - 1 ? "rounded-r-lg" : ""
                     }`}
                 >
-                  {NumberOfPatientsPerDayPerConsultant?.year2}
+                  {data?.NumberOfPatientsPerDayPerConsultant ? NumberOfPatientsPerDayPerConsultant?.year2 :"0"}
                 </td>
               </tr>
             </tbody>
@@ -842,7 +841,7 @@ const TableA = () => {
                 </div>
 
                 {
-                  !data ?
+                  !data?.Achievement ?
                     <>
                       <button
                         type="submit"
