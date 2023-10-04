@@ -35,7 +35,6 @@ const FeasibiltyReport = () => {
 
   const stepFun = async () => {
     const { data } = await getSteps(fid)
-    console.log(data)
     if (data.data != null) {
       setSteps(data?.data?.steps)
     } else {
