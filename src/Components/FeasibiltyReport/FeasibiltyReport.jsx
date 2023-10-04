@@ -11,7 +11,6 @@ import { useParams } from "react-router-dom";
 
 const FeasibiltyReport = () => {
   const { fid } = useParams()
-  console.log(fid)
   const [rendar,setRendar]=useState(1)
   const [steps, setSteps] = useState([
     { "name": 'Step 1', "status": 'current', "id": 1 },
